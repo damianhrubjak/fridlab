@@ -11,10 +11,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 mono: ['"IBM Plex Mono"', ...defaultTheme.fontFamily.mono],
-                secondary: [
-                    "'Press Start 2P'",
-                    ...defaultTheme.fontFamily.mono,
-                ],
+                heading: ["'Press Start 2P'", ...defaultTheme.fontFamily.mono],
             },
         },
         screens: {
