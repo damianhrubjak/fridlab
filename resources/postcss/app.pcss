@@ -1,5 +1,6 @@
-@import "./components/menu.pcss";
 @import "./variables.pcss";
+@import "./components/menu.pcss";
+@import "./components/home.pcss";
 
 @tailwind base;
 @tailwind utilities;
@@ -10,7 +11,7 @@
         @apply font-mono;
     }
     body {
-        @apply bg-body text-gray-200;
+        @apply bg-pallette-black text-gray-200;
     }
 }
 
@@ -21,12 +22,5 @@
     .page-wrapper {
         max-width: 1500px;
         @apply w-[calc(100%-40px)] mx-auto;
-    }
-}
-
-@layer components {
-    .heading-shadow {
-        text-shadow: 5px 5px 0 var(--color-dark-blue),
-            10px 10px 0 var(--color-blue);
     }
 }
