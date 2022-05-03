@@ -15,7 +15,7 @@
         rel="stylesheet">
 
 
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ request()->getSchemeAndHttpHost() . mix('css/app.css') }}">
 </head>
 
 <body>
@@ -24,6 +24,7 @@
         @yield('page-content')
     </main>
     <div class="scripts">
+        <script src="{{ request()->getSchemeAndHttpHost() . mix('js/app.js') }}"></script>
         @yield('scripts')
     </div>
 </body>
