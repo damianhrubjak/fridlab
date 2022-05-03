@@ -14,11 +14,13 @@ module.exports = {
                 heading: ["'Press Start 2P'", ...defaultTheme.fontFamily.mono],
             },
             colors: {
-                body: "var(--color-body)",
-                blue: "var(--color-blue)",
-                "dark-blue": "var(--color-dark-blue)",
-                yellow: "var(--color-yellow)",
-                green: "var(--color-green)",
+                pallette: {
+                    black: "var(--pallette-black)",
+                    blue: "var(--pallette-blue)",
+                    "dark-blue": "var(--pallette-dark-blue)",
+                    yellow: "var(--pallette-yellow)",
+                    green: "var(--pallette-green)",
+                },
             },
         },
         screens: {
