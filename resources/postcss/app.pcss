@@ -1,3 +1,5 @@
+@import "./variables.pcss";
+
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
@@ -18,5 +20,12 @@
     .page-wrapper {
         max-width: 1500px;
         @apply w-[calc(100%-40px)] mx-auto;
+    }
+}
+
+@layer components {
+    .heading-shadow {
+        text-shadow: 5px 5px 0 var(--color-dark-blue),
+            10px 10px 0 var(--color-blue);
     }
 }
