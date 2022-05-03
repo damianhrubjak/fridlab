@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --pallette-black: #080212;
+    --pallette-blue: #23e2ff;
+    --pallette-dark-blue: #143776;
+    --pallette-yellow: #f5ed10;
+    --pallette-green: #05fc05;
+}
+
+@layer base {
+    * {
+        @apply font-mono;
+    }
+    body {
+        @apply bg-pallette-black text-gray-200;
+    }
+}
+
+@layer utilities {
+    .page-section {
+        @apply relative py-20;
+    }
+    .page-wrapper {
+        max-width: 1500px;
+        @apply mx-auto w-[calc(100%-40px)];
+    }
+}

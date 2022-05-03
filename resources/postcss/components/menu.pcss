@@ -1,14 +1,12 @@
-@layer components {
-    .header-link {
-        @apply relative block py-1 text-xl;
-    }
+.header-link {
+    @apply relative block py-1 text-xl;
+}
 
-    .header-link::after {
-        content: "";
-        @apply absolute bottom-0 left-0 w-full h-0.5 bg-white scale-x-0 origin-center transition duration-300;
-    }
+.header-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-0.5 w-full origin-center scale-x-0 bg-white transition duration-300;
+}
 
-    .header-link:hover::after {
-        @apply scale-x-100;
-    }
+.header-link:hover::after {
+    @apply scale-x-100;
 }
