@@ -1,0 +1,13 @@
+@layer components {
+    .header-link {
+        @apply relative block px-1;
+    }
+
+    .header-link::after {
+        @apply absolute top-0 left-0 w-full h-0.5 bg-[#fff] origin-center transition duration-300 content-none;
+    }
+
+    .header-link:hover::after {
+        transform: scale(1);
+    }
+}
