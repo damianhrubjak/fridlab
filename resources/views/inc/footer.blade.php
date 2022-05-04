@@ -3,7 +3,7 @@
         <div class="page-wrapper">
             <div class="grid grid-cols-4 gap-16">
                 <div class="item">
-                    <img src="{{ asset('images/Logo/FriDLab-logo-transparent.svg') }}" alt="" class="w-1/2">
+                    <img src="{{ asset('images/Logo/FriDLab-logo-transparent.svg') }}" alt="" class="w-3/4">
                     <p class="mt-8 w-5/6">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officia reiciendis quo
                         aut tempore numquam impedit eligendi inventore
