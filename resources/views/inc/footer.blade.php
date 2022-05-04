@@ -12,27 +12,27 @@
                 <div class="item">
                     <h2 class="font-heading mb-8">Social</h2>
                     <div class="mt-8 grid grid-cols-2 gap-2">
-                        <div class=""> <a href="" class="mt-2 flex items-center">
+                        <div class=""> <a href="" class="footer-social-link hover:text-[#EE1D52]">
                                 <p class="footer-social-icon"><i class="fa-brands fa-tiktok"></i></p>
                                 <p class="">TikTok</p>
-                            </a> <a href="" class="mt-2 flex items-center">
+                            </a> <a href="" class="instagram footer-social-link">
                                 <p class="footer-social-icon"><i class="fa-brands fa-instagram"></i></p>
                                 <p class="">Instagram</p>
-                            </a> <a href="" class="mt-2 flex items-center">
+                            </a> <a href="" class="footer-social-link hover:text-[#4267B2]">
                                 <p class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></p>
                                 <p class="">Facebook</p>
-                            </a> <a href="" class="mt-2 flex items-center">
+                            </a> <a href="" class="footer-social-link hover:text-[#1DA1F2]">
                                 <p class="footer-social-icon"><i class="fa-brands fa-twitter"></i></p>
                                 <p class="">Twitter</p>
                             </a> </div>
                         <div class="">
-                            <a href="" class="mt-2 flex items-center">
+                            <a href="" class="footer-social-link hover:text-[#FF0000]">
                                 <p class="footer-social-icon"><i class="fa-brands fa-youtube"></i></p>
                                 <p class="">YouTube</p>
-                            </a> <a href="" class="mt-2 flex items-center">
+                            </a> <a href="" class="footer-social-link hover:text-[#7289DA]">
                                 <p class="footer-social-icon"><i class="fa-brands fa-discord"></i></p>
                                 <p class="">Discord</p>
-                            </a> <a href="" class="mt-2 flex items-center">
+                            </a> <a href="" class="footer-social-link hover:text-[#FBBC05]">
                                 <p class="footer-social-icon"><i class="fa-solid fa-envelope"></i></p>
                                 <p class="">Mail</p>
                             </a>
@@ -51,23 +51,23 @@
                 <div class="item">
                     <h2 class="font-heading mb-8">Contact</h2>
                     <div class="mt-8">
-                        <a href="" class="item-center mt-2 flex">
+                        <a href="" class="footer-contact-link group">
                             <div class="footer-social-icon">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
-                            <p>+421 908 456 123</p>
+                            <p class="footer-contact-link--text">+421 908 456 123</p>
                         </a>
-                        <a href="" class="item-center mt-2 flex">
+                        <a href="" class="footer-contact-link group">
                             <div class="footer-social-icon">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
-                            <p>+421 908 456 123</p>
+                            <p class="footer-contact-link--text">+421 908 456 123</p>
                         </a>
-                        <a href="" class="item-center mt-2 flex">
+                        <a href="" class="footer-contact-link group">
                             <div class="footer-social-icon">
                                 <i class="fa-solid fa-at"></i>
                             </div>
-                            <p>mail@mail.com</p>
+                            <p class="footer-contact-link--text">mail@mail.com</p>
                         </a>
                     </div>
                 </div>
