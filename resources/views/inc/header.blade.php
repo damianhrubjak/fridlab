@@ -1,4 +1,4 @@
-<header class="bg-pallette-black shadow-pallette-blue fixed top-0 left-0 z-20 w-full shadow-md">
+<header class="header-transparent fixed top-0 left-0 z-20 w-full shadow-md transition duration-500" id="app-header">
     <div class="page-wrapper relative py-4">
         <div class="flex items-center justify-between">
             <div class="logo w-40">
@@ -14,8 +14,8 @@
             </div>
         </div>
 
-        <div
-            class="bg-pallette-black shadow-pallette-blue social-links-wrapper absolute bottom-0 right-0 z-10 -mb-[28px] rounded px-3 py-1">
+        <div id="menu-social-links"
+            class="bg-pallette-black social-links-wrapper absolute bottom-0 right-0 z-10 -mb-[29px] rounded-b px-3 py-1">
             <a href="https://www.tiktok.com/@fridlab"><i
                     class="header-social-links fa-brands fa-tiktok hover:text-[#EE1D52]"></i></a>
             <a href="https://www.instagram.com/fridlabuniza/"><i
@@ -33,16 +33,4 @@
 
     </div>
 
-
-
 </header>
-
-<!--
-<a href="#"><i class="fa-brands fa-tiktok"></i></a>
-<a href="#"><i class="fa-brands fa-instagram"></i></a>
-<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-<a href="#"><i class="fa-brands fa-twitter"></i></a>
-<a href="#"><i class="fa-brands fa-youtube"></i></a>
-<a href="#"><i class="fa-brands fa-discord"></i></a>
-<a href="#"><i class="fa-solid fa-envelope"></i></a>
--->

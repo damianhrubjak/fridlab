@@ -1,3 +1,19 @@
+.header-transparent {
+    @apply bg-transparent shadow-transparent;
+    #menu-social-links {
+        transition: opacity 0.2s 0s;
+        @apply opacity-0;
+    }
+}
+.header-filled {
+    @apply bg-pallette-black shadow-pallette-blue;
+
+    #menu-social-links {
+        transition: opacity 0.2s 0.3s;
+        @apply opacity-100;
+    }
+}
+
 .header-link {
     @apply relative block py-1 text-xl;
 }
@@ -20,7 +36,8 @@
 }
 
 .social-links-wrapper {
-    box-shadow: 0 4px 3px 1px #23e2ff, 0 2px 3px -1px #23e2ff;
+    box-shadow: 3px 4px 4px 0px var(--pallette-blue),
+        -3px 4px 4px 0px var(--pallette-blue);
 }
 
 .instagram {
