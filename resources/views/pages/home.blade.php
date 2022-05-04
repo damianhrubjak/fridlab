@@ -36,7 +36,7 @@
 
     </section>
 
-    <section class="page-section pt-40">
+    <section class="page-section">
         <div class="page-wrapper flex items-center justify-between">
             <div class="w-2/5">
                 <h2 class="font-heading heading-shadow mb-16 text-5xl">Kto sme?</h2>
@@ -53,7 +53,7 @@
             </div>
 
             <div class="w-3/5 pl-20">
-                <img src="{{ asset('images/Dummy_image.jpg') }}" class="w-full" alt="PEOPLE">
+                <img src="{{ asset('images/Dummy_image.jpg') }}" class="pixel-border w-full" alt="PEOPLE">
             </div>
         </div>
     </section>

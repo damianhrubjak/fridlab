@@ -6,9 +6,16 @@
     @apply absolute top-0 h-full w-56 object-cover opacity-50;
 }
 
+.pixel-border {
+    box-shadow: 8px 0px 0px 0px var(--pallette-yellow),
+        0px 8px 0px 0px var(--pallette-yellow),
+        -8px 0px 0px 0px var(--pallette-yellow),
+        0px -8px 0px 0px var(--pallette-yellow);
+}
+
 .cta-button {
     text-shadow: 0px 0px transparent;
-    box-shadow: inset -6px -6px #c4be08, 6px 0px 0px 0px #747109,
+    box-shadow: inset -6px -6px #c4be08, 6px 0px 0px 0px #7d7905,
         0px 6px 0px 0px #7d7905, -6px 0px 0px 0px #7d7905,
         0px -6px 0px 0px #7d7905;
     @apply relative z-0 flex items-center bg-pallette-yellow py-4 px-8 text-center font-heading text-xl text-pallette-black transition-all duration-300;
