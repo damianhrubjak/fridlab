@@ -28,6 +28,9 @@
     <main>
         @yield('page-content')
     </main>
+
+    @include('inc.footer')
+
     <div class="scripts">
         <script src="{{ request()->getSchemeAndHttpHost() . mix('js/app.js') }}"></script>
         @yield('scripts')

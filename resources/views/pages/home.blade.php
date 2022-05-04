@@ -5,7 +5,7 @@
 @section('page-content')
 
     <section class="h-screen pt-28 pb-0">
-        <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-2.svg') }}" alt="">
+        <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-warm.svg') }}" alt="">
 
         <div class="page-wrapper flex h-full items-center justify-center">
 
@@ -30,7 +30,7 @@
 
             </div>
         </div>
-        <img class="side-shape right-0 rotate-180" src="{{ asset('images/homepage-illustration-2.svg') }}" alt="">
+        <img class="side-shape right-0 rotate-180" src="{{ asset('images/homepage-illustration-warm.svg') }}" alt="">
 
     </section>
 
