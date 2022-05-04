@@ -15,7 +15,7 @@
 }
 
 #scroll-up:hover {
-    animation: bounce 1s ease-in infinite;
+    animation: bounce 2s ease-in-out infinite;
 }
 
 .reveal-arrow {
@@ -26,13 +26,20 @@
     0% {
         transform: translateY(0);
     }
+    40% {
+        transform: translateY(0);
+    }
 
-    33% {
+    55% {
         transform: translateY(-5px);
     }
 
-    66% {
+    70% {
         transform: translateY(5px);
+    }
+
+    85% {
+        transform: translateY(-5px);
     }
 
     100% {

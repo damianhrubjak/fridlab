@@ -1,6 +1,6 @@
 <div class="fixed bottom-20 right-16 p-2">
-    <a href="#" id="scroll-up" class="block opacity-0 transition duration-500"><svg version="1.1"
-            class="fill-pallette-yellow h-12 w-12 rotate-90" xmlns="http://www.w3.org/2000/svg"
+    <a href="#" id="scroll-up" class="block opacity-0 transition duration-500">
+        <svg version="1.1" class="fill-pallette-yellow h-12 w-12 rotate-90" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="480px" height="480px"
             viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
             <g>
@@ -11,35 +11,6 @@
   M208,384h32v-32h-32V384z M240,352h32v-32h-32V352z M176,352h32v-32h-32V352z M208,320h32v-32h-32V320z M144,320h32v-32h-32V320z
   M176,288h32v-32h-32V288z M112,288h32v-32h-32V288z M112,224H80v32h32V224z M176,224h-32v32h32V224z" />
             </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-        </svg></a>
+        </svg>
+    </a>
 </div>
