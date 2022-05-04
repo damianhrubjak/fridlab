@@ -4,13 +4,13 @@
 
 @section('page-content')
 
-    <section class="min-h-screen pt-28 pb-0">
+    <section class="relative flex min-h-screen items-stretch pt-28 pb-10">
         <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-warm.svg') }}" alt="">
 
-        <div class="page-wrapper flex h-full items-center justify-center">
+        <div class="page-wrapper flex items-center justify-center self-stretch">
 
-            <div class="h-full w-1/2"></div>
-            <div class="relative flex h-full w-1/2 items-center">
+            <div class="w-1/2"></div>
+            <div class="relative flex w-1/2 items-center">
                 <div class="z-10 w-full">
                     <h1 class="font-heading heading-shadow w-3/4 text-7xl leading-snug">Hello, we are good</h1>
 
@@ -35,10 +35,10 @@
     </section>
 
     <section class="page-section pt-40">
-        <div class="page-wrapper flex justify-between items-center">
+        <div class="page-wrapper flex items-center justify-between">
             <div class="w-2/5">
-                <h2 class="text-5xl font-heading heading-shadow mb-16">Kto sme?</h2>
-                <h3 class="text-lg mb-8 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odio
+                <h2 class="font-heading heading-shadow mb-16 text-5xl">Kto sme?</h2>
+                <h3 class="mb-8 text-lg font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odio
                     sint
                     numquam animi reiciendis
                     est
