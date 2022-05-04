@@ -16,22 +16,29 @@
 }
 
 .header-social-links {
-    @apply px-1 transition duration-300;
+    @apply px-1 text-white transition-all duration-300;
 }
 
 .social-links-wrapper {
     box-shadow: 0 4px 3px 1px #23e2ff, 0 2px 3px -1px #23e2ff;
 }
 
-.instagram:hover {
+.instagram {
     background: linear-gradient(
         45deg,
-        #f09433 0%,
-        #e6683c 25%,
-        #dc2743 50%,
-        #cc2366 75%,
+        #fff 0%,
+        #fff 50%,
+        #f09433 50%,
+        #e6683c 62.5%,
+        #dc2743 75%,
+        #cc2366 87.5%,
         #bc1888 100%
     );
-    -webkit-background-clip: text;
+    background-size: 200%;
+    background-position: 0%;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    &:hover {
+        background-position: 110%;
+    }
 }

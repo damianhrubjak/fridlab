@@ -1,12 +1,12 @@
 <header class="bg-pallette-black shadow-pallette-blue fixed top-0 left-0 z-20 w-full shadow-md">
-    <div class="page-wrapper py-4 relative">
+    <div class="page-wrapper relative py-4">
         <div class="flex items-center justify-between">
             <div class="logo w-40">
                 <img src="{{ asset('images/Logo/FriDLab-logo-transparent.svg') }}" class="h-full w-[200px]" alt="LOGO">
             </div>
             <div class="flex gap-16">
 
-                <a class="header-link block active" href="#">Domov</a>
+                <a class="header-link active block" href="#">Domov</a>
                 <a class="header-link block" href="#">O nás</a>
                 <a class="header-link block" href="#">Kontakt</a>
                 <a class="header-link block" href="#">Projekty</a>
@@ -15,7 +15,7 @@
         </div>
 
         <div
-            class="absolute bottom-0 right-0 -mb-[28px] bg-pallette-black px-3 shadow-pallette-blue py-1 rounded z-10 social-links-wrapper">
+            class="bg-pallette-black shadow-pallette-blue social-links-wrapper absolute bottom-0 right-0 z-10 -mb-[28px] rounded px-3 py-1">
             <a href="#"><i class="header-social-links fa-brands fa-tiktok hover:text-[#EE1D52]"></i></a>
             <a href="#"><i class="header-social-links fa-brands fa-instagram instagram"></i></a>
             <a href="#"><i class="header-social-links fa-brands fa-facebook-f hover:text-[#4267B2]"></i></a>
