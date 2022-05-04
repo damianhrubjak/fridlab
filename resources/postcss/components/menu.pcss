@@ -4,9 +4,21 @@
 
 .header-link::after {
     content: "";
-    @apply absolute bottom-0 left-0 h-0.5 w-full origin-center scale-x-0 bg-white transition duration-300;
+    @apply absolute bottom-0 left-0 h-0.5 w-full origin-center scale-x-0 bg-pallette-yellow transition duration-300;
 }
 
 .header-link:hover::after {
     @apply scale-x-100;
+}
+
+.active::after {
+    @apply scale-x-100;
+}
+
+.header-social-links {
+    @apply px-1;
+}
+
+.social-links-wrapper {
+    box-shadow: 0 4px 3px 1px #23e2ff, 0 2px 3px -1px #23e2ff;
 }
