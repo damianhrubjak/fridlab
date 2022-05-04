@@ -23,8 +23,10 @@
                     </p>
 
                     <div class="mt-16">
-                        <button class="font-heading bg-pallette-yellow text-pallette-black py-4 px-8 text-xl cta-button">Naše
-                            projekty</button>
+                        <button class="cta-button">
+                            <div class="content">Naše projekty</div>
+                            <div class="arrow">></div>
+                        </button>
                     </div>
                 </div>
 
