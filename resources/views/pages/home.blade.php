@@ -4,7 +4,7 @@
 
 @section('page-content')
 
-    <section class="h-screen pt-28 pb-0">
+    <section class="min-h-screen pt-28 pb-0">
         <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-warm.svg') }}" alt="">
 
         <div class="page-wrapper flex h-full items-center justify-center">
@@ -32,6 +32,28 @@
         </div>
         <img class="side-shape right-0 rotate-180" src="{{ asset('images/homepage-illustration-warm.svg') }}" alt="">
 
+    </section>
+
+    <section class="page-section pt-40">
+        <div class="page-wrapper flex justify-between items-center">
+            <div class="w-2/5">
+                <h2 class="text-5xl font-heading heading-shadow mb-16">Kto sme?</h2>
+                <h3 class="text-lg mb-8 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odio
+                    sint
+                    numquam animi reiciendis
+                    est
+                    corrupti facere.</h3>
+                <p>Sme partia ľudí, ktorá vo svojom voľnom čase organizuje rôzne podujatia pre študentov, absolventov,
+                    vyučujúcich a priateľov Fakulty riadenia a informatiky. Aj keď každý z nás šiel na FRI s inými záujmami
+                    a
+                    študijnými predpokladmi, v súčasnosti nás FRI Club spája. Radi zlepšujeme úroveň študentského života na
+                    UNIZA.</p>
+            </div>
+
+            <div class="w-3/5 pl-20">
+                <img src="{{ asset('images/Dummy_image.jpg') }}" class="w-full" alt="PEOPLE">
+            </div>
+        </div>
     </section>
 
 @endsection
