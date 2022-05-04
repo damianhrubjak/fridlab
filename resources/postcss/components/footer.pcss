@@ -13,3 +13,29 @@
 .footer-contact-link--text {
     @apply border-b-2 border-transparent transition duration-300 group-hover:border-pallette-yellow;
 }
+
+#scroll-up:hover {
+    animation: bounce 1s ease-in infinite;
+}
+
+.reveal-arrow {
+    opacity: 1;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(-5px);
+    }
+
+    66% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
