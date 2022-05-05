@@ -18,6 +18,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+    @yield('styles')
+
     <link rel="stylesheet" href="{{ request()->getSchemeAndHttpHost() . mix('css/app.css') }}">
 </head>
 
