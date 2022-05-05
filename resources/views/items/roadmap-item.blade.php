@@ -1,4 +1,4 @@
- <div class="flex even:flex-row-reverse">
+ <div class="relative z-10 flex even:flex-row-reverse">
      <div class="w-1/2 pb-24">
          <img src="{{ $milestone['image'] }}" alt="" class="pixel-border h-full w-full object-cover object-bottom">
      </div>
