@@ -28,7 +28,7 @@
                     class="header-social-links fa-brands fa-youtube hover:text-[#FF0000]"></i></a>
             <a href="https://discord.com/invite/vfy4KDaMXY"><i
                     class="header-social-links fa-brands fa-discord hover:text-[#7289DA]"></i></a>
-            <a href="#"><i class="header-social-links fa-solid fa-envelope hover:text-[#FBBC05]"></i></a>
+            <a href="#"><i class="header-social-links fa-solid fa-envelope gmail"></i></a>
         </div>
 
     </div>

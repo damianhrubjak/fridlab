@@ -36,7 +36,7 @@
                                 class="footer-social-link hover:text-[#7289DA]">
                                 <p class="footer-social-icon"><i class="fa-brands fa-discord"></i></p>
                                 <p class="">Discord</p>
-                            </a> <a href="" class="footer-social-link hover:text-[#FBBC05]">
+                            </a> <a href="" class="footer-social-link gmail w-max">
                                 <p class="footer-social-icon"><i class="fa-solid fa-envelope"></i></p>
                                 <p class="">Mail</p>
                             </a>

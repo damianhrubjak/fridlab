@@ -1,4 +1,3 @@
-
 .header-filled {
     @apply bg-pallette-black shadow-pallette-blue;
 
@@ -32,6 +31,26 @@
 .social-links-wrapper {
     box-shadow: 3px 4px 4px 0px var(--pallette-blue),
         -3px 4px 4px 0px var(--pallette-blue);
+}
+
+.gmail {
+    background: linear-gradient(
+        to right,
+        #fff 0%,
+        #fff 50%,
+        #4285f4 50% 62.5%,
+        #bb001b 62.5% 75%,
+        #ea4335 75% 87.5%,
+        #fbbc05 87.5% 90%,
+        #34a853 90% 100%
+    );
+    background-size: 200%;
+    background-position: 0%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+        background-position: 100%;
+    }
 }
 
 .instagram {
