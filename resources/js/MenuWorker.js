@@ -1,6 +1,5 @@
 class MenuWorker {
     #header = null;
-    #links = null;
     #oldScrollValue = 0;
     constructor() {
         this.#header = document.querySelector("#app-header");
@@ -18,13 +17,6 @@ class MenuWorker {
         let scrollTop =
             window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > 0) {
-            this.setMenuFill(true);
-        } else {
-            this.setMenuFill(false);
-            this.setMenuPosition(false);
-        }
-
         if (scrollTop > 1000) {
             this.setMenuPosition(true);
         }
@@ -35,13 +27,7 @@ class MenuWorker {
 
         this.#oldScrollValue = scrollTop <= 0 ? 0 : scrollTop;
     }
-
-    setMenuFill(shouldBeFilled) {
-        shouldBeFilled
-            ? this.#header.classList.add("header-filled")
-            : this.#header.classList.remove("header-filled");
-    }
-
+    
     setMenuPosition(shouldGoAway) {
         shouldGoAway
             ? this.#header.classList.add("-translate-y-full")

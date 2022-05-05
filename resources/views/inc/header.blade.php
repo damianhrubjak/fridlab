@@ -1,4 +1,4 @@
-<header class="header-transparent fixed top-0 left-0 z-20 w-full shadow-md transition duration-500" id="app-header">
+<header class="header-filled fixed top-0 left-0 z-20 w-full shadow-md transition duration-500" id="app-header">
     <div class="page-wrapper relative py-4">
         <div class="flex items-center justify-between">
             <div class="logo w-40">
