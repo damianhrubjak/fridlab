@@ -5,7 +5,7 @@
 @section('page-content')
 
     <section class="relative flex min-h-screen items-stretch pt-28 pb-10">
-        <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-warm.svg') }}" alt="">
+        <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-cold.svg') }}" alt="">
 
         <div class="page-wrapper flex items-center justify-center self-stretch">
 
@@ -32,7 +32,7 @@
 
             </div>
         </div>
-        <img class="side-shape right-0 rotate-180" src="{{ asset('images/homepage-illustration-warm.svg') }}" alt="">
+        <img class="side-shape right-0 rotate-180" src="{{ asset('images/homepage-illustration-cold.svg') }}" alt="">
 
     </section>
 
