@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <section class="page-section bg-pallette-black custom-pixel-art">
+    <section class="page-section bg-pallette-black custom-pixel-art border-pallette-blue border-y-2">
 
         {{-- DINO --}}
         <img class="absolute left-16 top-64 w-80 rotate-12 opacity-40" src="{{ asset('images/pixel-art/dino-lose.png') }}"
@@ -76,7 +76,7 @@
 
         <div class="page-wrapper">
 
-            <h2 class="font-heading heading-shadow mb-32 text-center text-6xl">Nasa cesta</h2>
+            <h2 class="font-heading heading-shadow mb-32 text-center text-6xl">Naša cesta</h2>
 
             @php
                 $milestones = [
