@@ -1,5 +1,6 @@
 class MenuWorker {
     #header = null;
+    #links = null;
     #oldScrollValue = 0;
     constructor() {
         this.#header = document.querySelector("#app-header");
