@@ -5,7 +5,11 @@
 @section('page-content')
 
     <section class="relative flex min-h-screen items-stretch pt-28 pb-10">
-        <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-cold-2.svg') }}" alt="">
+        <img
+            class="side-shape left-0"
+            src="{{ asset('images/homepage-illustration-cold-2.svg') }}"
+            alt=""
+        >
 
         <div class="page-wrapper flex items-center justify-center self-stretch">
 
@@ -32,7 +36,11 @@
 
             </div>
         </div>
-        <img class="side-shape right-0 rotate-180" src="{{ asset('images/homepage-illustration-cold-2.svg') }}" alt="">
+        <img
+            class="side-shape right-0 rotate-180"
+            src="{{ asset('images/homepage-illustration-cold-2.svg') }}"
+            alt=""
+        >
 
     </section>
 
@@ -53,7 +61,11 @@
             </div>
 
             <div class="w-3/5 pl-20">
-                <img src="{{ asset('images/Dummy_image.jpg') }}" class="pixel-border w-full" alt="PEOPLE">
+                <img
+                    src="{{ asset('images/Dummy_image.jpg') }}"
+                    class="pixel-border w-full"
+                    alt="PEOPLE"
+                >
             </div>
         </div>
     </section>
@@ -61,18 +73,32 @@
     <section class="page-section bg-pallette-black custom-pixel-art border-pallette-blue border-y-2">
 
         {{-- DINO --}}
-        <img class="absolute left-16 top-64 w-80 rotate-12 opacity-40" src="{{ asset('images/pixel-art/dino-lose.png') }}"
-            alt="">
+        <img
+            class="absolute left-16 top-64 w-80 rotate-12 opacity-40"
+            src="{{ asset('images/pixel-art/dino-lose.png') }}"
+            alt=""
+        >
 
         {{-- CACTUS --}}
-        <img class="absolute right-64 bottom-32 w-40 opacity-40" src="{{ asset('images/pixel-art/cactus.png') }}" alt="">
+        <img
+            class="absolute right-64 bottom-32 w-40 opacity-40"
+            src="{{ asset('images/pixel-art/cactus.png') }}"
+            alt=""
+        >
 
         {{-- PAC-MAN --}}
-        <img class="absolute right-20 top-1/3 w-64 rotate-12 -scale-x-[1] opacity-40"
-            src="{{ asset('images/pixel-art/pacman.png') }}" alt="">
+        <img
+            class="absolute right-20 top-1/3 w-64 rotate-12 -scale-x-[1] opacity-40"
+            src="{{ asset('images/pixel-art/pacman.png') }}"
+            alt=""
+        >
 
         {{-- GHOST --}}
-        <img class="absolute left-16 bottom-1/3 w-64 opacity-40" src="{{ asset('images/pixel-art/ghost.png') }}" alt="">
+        <img
+            class="absolute left-16 bottom-1/3 w-64 opacity-40"
+            src="{{ asset('images/pixel-art/ghost.png') }}"
+            alt=""
+        >
 
         <div class="page-wrapper">
 
@@ -116,22 +142,81 @@
 
     <section class="page-section">
         <div class="page-wrapper">
-            <h2 class="font-heading heading-shadow mb-16 text-5xl">Sponsors</h2>
+            <h2 class="font-heading heading-shadow mb-16 text-5xl">Sponzori</h2>
 
-            <div class="splide w-full" aria-label="Slide Container Example">
+            <div
+                class="splide relative w-full"
+                aria-label="Slide Container Example"
+            >
+                <div class="splide__arrows">
+                    <button
+                        class="splide__arrow splide__arrow--prev heading-shadow font-heading absolute top-1/2 left-0 z-20 -ml-24 text-5xl"
+                    >
+                        {{ '<' }}
+                    </button>
+                    <button
+                        class="splide__arrow splide__arrow--next heading-shadow font-heading absolute top-1/2 right-0 z-20 -mr-24 text-5xl"
+                    >
+                        {{ '>' }}
+                    </button>
+
+                </div>
+
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
-                            <div class="splide__slide__container">
-                                <img src="...">
+                            <div class="splide__slide__container h-52">
+                                <img
+                                    class="h-full"
+                                    src="{{ asset('images/sponsors/globallogic-logo-vector.png') }}"
+                                >
                             </div>
-                            Lorem Ipsum Dolor Sit Amet
+                            TOTOK JE GLOBAL GOGIC
                         </li>
                         <li class="splide__slide">
-                            <div class="splide__slide__container">
-                                <img src="...">
+                            <div class="splide__slide__container h-52">
+                                <img
+                                    class="h-full"
+                                    src="{{ asset('images/sponsors/kia.jpg') }}"
+                                >
                             </div>
-                            Lorem Ipsum Dolor Sit Amet
+                            TOTOK JE KIA
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container h-52">
+                                <img
+                                    class="h-full"
+                                    src="{{ asset('images/sponsors/kia1.webp') }}"
+                                >
+                            </div>
+                            TOTOK JE ZASA KIA
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container h-52">
+                                <img
+                                    class="h-full"
+                                    src="{{ asset('images/sponsors/stiahnuť (1).png') }}"
+                                >
+                            </div>
+                            TOTOK JE NEVIEM CO
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container h-52">
+                                <img
+                                    class="h-full"
+                                    src="{{ asset('images/sponsors/stiahnuť.png') }}"
+                                >
+                            </div>
+                            TOTOK JE ZAS NEVIEM CO
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container h-52">
+                                <img
+                                    class="h-full"
+                                    src="{{ asset('images/sponsors/tatra.webp') }}"
+                                >
+                            </div>
+                            TOTOK JE TATRA BANKA
                         </li>
                     </ul>
                 </div>
@@ -142,7 +227,10 @@
 @endsection
 
 @section('styles')
-    <link rel="stylesheet" href="{{ request()->getSchemeAndHttpHost() . mix('css/vendor/splide-core.min.css') }}">
+    <link
+        rel="stylesheet"
+        href="{{ request()->getSchemeAndHttpHost() . mix('css/vendor/splide-core.min.css') }}"
+    >
 @endsection
 
 @section('scripts')
