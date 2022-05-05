@@ -58,4 +58,66 @@
         </div>
     </section>
 
+    <section class="page-section bg-pallette-black custom-pixel-art">
+
+        {{-- DINO --}}
+        <img class="absolute left-16 top-64 w-80 rotate-12 opacity-40" src="{{ asset('images/pixel-art/dino-lose.png') }}"
+            alt="">
+
+        {{-- CACTUS --}}
+        <img class="absolute right-64 bottom-32 w-40 opacity-40" src="{{ asset('images/pixel-art/cactus.png') }}" alt="">
+
+        {{-- PAC-MAN --}}
+        <img class="absolute right-20 top-1/3 w-64 rotate-12 -scale-x-[1] opacity-40"
+            src="{{ asset('images/pixel-art/pacman.png') }}" alt="">
+
+        {{-- GHOST --}}
+        <img class="absolute left-16 bottom-1/3 w-64 opacity-40" src="{{ asset('images/pixel-art/ghost.png') }}" alt="">
+
+        <div class="page-wrapper">
+
+            <h2 class="font-heading heading-shadow mb-32 text-center text-6xl">Nasa cesta</h2>
+
+            @php
+                $milestones = [
+                    [
+                        'image' => asset('images/milestones/milestone-1.jpg'),
+                        'heading' => 'Vypratanie priestorov',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                    ],
+                    [
+                        'image' => asset('images/milestones/milestone-2.jpg'),
+                        'heading' => 'Upravenie priestorov',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                    ],
+                    [
+                        'image' => asset('images/milestones/milestone-3.jpg'),
+                        'heading' => 'Malovanie',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                    ],
+                    [
+                        'image' => asset('images/milestones/milestone-4.jpg'),
+                        'heading' => 'Priprava tlaciarni',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                    ],
+                    [
+                        'image' => asset('images/milestones/milestone-5.jpg'),
+                        'heading' => 'Tlacenie',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                    ],
+                ];
+            @endphp
+
+            @foreach ($milestones as $milestone)
+                @include('items.roadmap-item', compact('milestone'))
+            @endforeach
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="page-wrapper flex items-center justify-between">
+            <h2 class="font-heading heading-shadow mb-16 text-5xl">Sponsors</h2>
+        </div>
+    </section>
+
 @endsection
