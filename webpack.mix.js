@@ -12,7 +12,12 @@ const mix = require("laravel-mix");
  */
 
 mix.js("resources/js/app.js", "public/js")
+    .js("resources/js/splide.js", "public/js")
     .postCss("resources/postcss/app.pcss", "public/css")
+    .copy(
+        "node_modules/@splidejs/splide/dist/css/splide-core.min.css",
+        "public/css/vendor"
+    )
     .disableSuccessNotifications()
     .webpackConfig({
         stats: {

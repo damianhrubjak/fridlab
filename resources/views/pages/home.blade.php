@@ -5,7 +5,7 @@
 @section('page-content')
 
     <section class="relative flex min-h-screen items-stretch pt-28 pb-10">
-        <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-cold.svg') }}" alt="">
+        <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-cold-2.svg') }}" alt="">
 
         <div class="page-wrapper flex items-center justify-center self-stretch">
 
@@ -32,7 +32,7 @@
 
             </div>
         </div>
-        <img class="side-shape right-0 rotate-180" src="{{ asset('images/homepage-illustration-cold.svg') }}" alt="">
+        <img class="side-shape right-0 rotate-180" src="{{ asset('images/homepage-illustration-cold-2.svg') }}" alt="">
 
     </section>
 
@@ -115,9 +115,36 @@
     </section>
 
     <section class="page-section">
-        <div class="page-wrapper flex items-center justify-between">
+        <div class="page-wrapper">
             <h2 class="font-heading heading-shadow mb-16 text-5xl">Sponsors</h2>
+
+            <div class="splide w-full" aria-label="Slide Container Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+                                <img src="...">
+                            </div>
+                            Lorem Ipsum Dolor Sit Amet
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+                                <img src="...">
+                            </div>
+                            Lorem Ipsum Dolor Sit Amet
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
+@endsection
+
+@section('styles')
+    <link rel="stylesheet" href="{{ request()->getSchemeAndHttpHost() . mix('css/vendor/splide-core.min.css') }}">
+@endsection
+
+@section('scripts')
+    <script src="{{ request()->getSchemeAndHttpHost() . mix('js/splide.js') }}"></script>
 @endsection
