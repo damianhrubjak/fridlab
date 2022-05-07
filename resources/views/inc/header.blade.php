@@ -6,8 +6,10 @@
             </div>
             <div class="flex gap-16">
 
-                <a class="header-link active block" href="#">Domov</a>
-                <a class="header-link block" href="#">O nás</a>
+                <a class="header-link {{ request()->routeIs('page-home') ? 'active' : '' }} block"
+                    href="{{ route('page-home') }}">Domov</a>
+                <a class="header-link {{ request()->routeIs('page-about-us') ? 'active' : '' }} block"
+                    href="{{ route('page-about-us') }}">O nás</a>
                 <a class="header-link block" href="#">Kontakt</a>
                 <a class="header-link block" href="#">Projekty</a>
 

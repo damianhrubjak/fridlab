@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'pages.home');;
+Route::view('/about-us', 'pages.about-us');
+
+Route::get('/', [FrontendController::class, 'homePage'])->name('page-home');
+Route::get('/about-us', [FrontendController::class, 'aboutUsPage'])->name('page-about-us');
