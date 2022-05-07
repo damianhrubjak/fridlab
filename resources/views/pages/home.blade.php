@@ -71,6 +71,10 @@
         <img class="absolute right-20 top-1/3 w-64 rotate-12 -scale-x-[1] opacity-40"
             src="{{ asset('images/pixel-art/pacman.png') }}" alt="">
 
+        {{-- MARIO --}}
+        <img class="absolute top-[1130px] left-14 scale-75 opacity-40" src="{{ asset('images/pixel-art/mario.png') }}"
+            alt="MARIO">
+
         {{-- GHOST --}}
         <img class="absolute left-16 bottom-1/3 w-64 opacity-40" src="{{ asset('images/pixel-art/ghost.png') }}" alt="">
 
