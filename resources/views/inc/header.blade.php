@@ -10,8 +10,10 @@
                     href="{{ route('page-home') }}">Domov</a>
                 <a class="header-link {{ request()->routeIs('page-about-us') ? 'active' : '' }} block"
                     href="{{ route('page-about-us') }}">O nás</a>
-                <a class="header-link block" href="#">Kontakt</a>
                 <a class="header-link block" href="#">Projekty</a>
+                <a class="header-link block" href="#">3D Modely</a>
+                <a class="header-link {{ request()->routeIs('page-contact') ? 'active' : '' }} block"
+                    href="{{ route('page-contact') }}">Kontakt</a>
 
             </div>
         </div>
