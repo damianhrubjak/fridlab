@@ -31,9 +31,4 @@ class FrontEndController extends Controller
     {
         return view('pages.login');
     }
-
-    public function adminPage()
-    {
-        return view('admin.pages.home');
-    }
 }

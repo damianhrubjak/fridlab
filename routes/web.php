@@ -21,8 +21,7 @@ Route::group(['as' => 'fe-pages.'], function () {
     Route::get('/blog', [FrontendController::class, 'blogPage'])->name('blog');
     Route::get('/3d-modely', [FrontendController::class, 'modelsPage'])->name('3d-models');
     Route::get('/kontakt', [FrontendController::class, 'contactPage'])->name('contact');
-    Route::get('/prihlasenie', [FrontendController::class, 'loginPage'])->name('login');
-    Route::get('/admin', [FrontendController::class, 'adminPage'])->name('admin');
+    Route::get('/prihlasenie', [FrontendController::class, 'loginPage'])->name('login')->middleware('guest');
 });
 
 
@@ -30,7 +29,10 @@ Route::group(['as' => 'fe-pages.'], function () {
 Route::group(
     ['as' => 'auth.'],
     function () {
-        Route::post('/login', [AuthController::class, 'store'])->middleware(['guest'])->name('login');
+        Route::post('/login', [AuthController::class, 'store'])->name('login');
         Route::post('/logout', [AuthController::class, 'destroy'])->middleware('auth')->name('logout');
     }
 );
+
+//* Admin
+require __DIR__ . '/admin.php';
