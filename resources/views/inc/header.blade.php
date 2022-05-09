@@ -6,14 +6,14 @@
             </div>
             <div class="flex gap-16">
 
-                <a class="header-link {{ request()->routeIs('page-home') ? 'active' : '' }} block"
-                    href="{{ route('page-home') }}">Domov</a>
-                <a class="header-link {{ request()->routeIs('page-about-us') ? 'active' : '' }} block"
-                    href="{{ route('page-about-us') }}">O nás</a>
-                <a class="header-link block" href="#">Projekty</a>
-                <a class="header-link block" href="#">3D Modely</a>
-                <a class="header-link {{ request()->routeIs('page-contact') ? 'active' : '' }} block"
-                    href="{{ route('page-contact') }}">Kontakt</a>
+                <a class="header-link {{ request()->routeIs('fe-pages.home') ? 'active' : '' }} block"
+                    href="{{ route('fe-pages.home') }}">Domov</a>
+                <a class="header-link {{ request()->routeIs('fe-pages.blog') ? 'active' : '' }} block"
+                    href="{{ route('fe-pages.blog') }}">Blog</a>
+                <a class="header-link {{ request()->routeIs('fe-pages.3d-models') ? 'active' : '' }} block"
+                    href="{{ route('fe-pages.3d-models') }}">3D Modely</a>
+                <a class="header-link {{ request()->routeIs('fe-pages.contact') ? 'active' : '' }} block"
+                    href="{{ route('fe-pages.contact') }}">Kontakt</a>
 
             </div>
         </div>
