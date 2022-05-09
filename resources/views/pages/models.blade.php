@@ -1,10 +1,9 @@
 @extends('layout.master')
 
-@section('page-title', 'O nás')
+@section('page-title', '3D modely')
 
 @section('page-content')
 
-    
+
 
 @endsection
-

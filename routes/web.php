@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/about-us', 'pages.about-us');
-
-Route::get('/', [FrontendController::class, 'homePage'])->name('page-home');
-Route::get('/about-us', [FrontendController::class, 'aboutUsPage'])->name('page-about-us');
-Route::get('/contact', [FrontendController::class, 'contactPage'])->name('page-contact');
+Route::group(['as' => 'fe-pages.'], function () {
+    Route::get('/', [FrontendController::class, 'homePage'])->name('home');
+    Route::get('/blog', [FrontendController::class, 'blogPage'])->name('blog');
+    Route::get('/3d-modely', [FrontendController::class, 'modelsPage'])->name('3d-models');
+    Route::get('/kontakt', [FrontendController::class, 'contactPage'])->name('contact');
+});
