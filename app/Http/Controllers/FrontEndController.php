@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 
-class FrontendController extends Controller
+class FrontEndController extends Controller
 {
     public function homePage()
     {
@@ -12,7 +13,8 @@ class FrontendController extends Controller
 
     public function blogPage()
     {
-        return view('pages.blog');
+        $blogs = Blog::all();
+        return view('pages.blog', compact('blogs'));
     }
 
     public function modelsPage()
