@@ -1,4 +1,4 @@
-<aside class="bg-pallette-black fixed h-screen w-80">
+<aside class="bg-pallette-black fixed flex h-screen w-80 flex-col justify-between">
     <div class="w-full">
 
         <div class="mx-auto mt-4 w-48">
@@ -18,5 +18,14 @@
                 <span>3D modely</span>
             </a>
         </div>
+    </div>
+
+    <div class="flex justify-center gap-32 bg-slate-900 py-4">
+        <a href="#"><i
+                class="fa-solid fa-arrow-left-long icon-link text-3xl text-white transition duration-300"></i></a>
+        <a href="#"><i
+                class="fa-solid fa-arrow-right-from-bracket icon-link text-3xl text-white transition duration-300"></i></a>
+
+
     </div>
 </aside>
