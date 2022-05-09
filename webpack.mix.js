@@ -12,6 +12,8 @@ const mix = require("laravel-mix");
  */
 
 mix.js("resources/js/app.js", "public/js")
+    .js("resources/js/react/ContactForm", "public/js/react-contact-form.js")
+    .react()
     .js("resources/js/splide.js", "public/js")
     .postCss("resources/postcss/app.pcss", "public/css")
     .copy(
