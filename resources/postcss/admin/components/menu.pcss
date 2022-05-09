@@ -1,5 +1,5 @@
 .nav-link-item {
-    @apply mt-2 flex items-center justify-start bg-slate-900 py-4 px-4 text-xl text-white;
+    @apply mt-2 flex items-center justify-start  py-4 px-4 text-xl font-bold text-white transition-all duration-300;
     span {
         @apply block w-12;
     }
@@ -8,5 +8,18 @@
     }
     span:nth-child(2) {
         @apply w-max;
+    }
+
+    background: linear-gradient(
+        45deg,
+        rgb(15 23 42) 0%,
+        rgb(15 23 42) 50%,
+        var(--pallette-yellow) 50% 100%
+    );
+    background-size: 200%;
+    background-position: 0%;
+    &:hover {
+        @apply text-black;
+        background-position: 100%;
     }
 }
