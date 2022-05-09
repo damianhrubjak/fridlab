@@ -41,11 +41,33 @@
     </section>
 
     <section class="page-section">
+        <div class="page-wrapper mb-16 text-center">
+            <h2 class="font-heading heading-shadow text-5xl">Kde nás nájdete</h2>
+        </div>
+        <div class="h-[650px] w-full" id="map"></div>
+    </section>
 
+    <section class="page-section">
+        <div class="page-wrapper text-center">
+            <h3 class="font-heading text-3xl">„Can't Do It In Real Life? Do It On 3d printer."</h3>
+            <p class="mt-5 text-right">Matúš Baláži -> 2024</p>
+        </div>
     </section>
 
 @endsection
 
 @section('scripts')
     <script src="{{ request()->getSchemeAndHttpHost() . mix('js/react-contact-form.js') }}"></script>
+    <script src="{{ request()->getSchemeAndHttpHost() . mix('js/map.js') }}"></script>
+
+@endsection
+
+@section('styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.min.css"
+        integrity="sha512-oIQ0EBio8LJupRpgmDsIsvm0Fsr6c3XNHLB7at5xb+Cf6eQuCX9xuX8XXGRIcokNgdqL1ms7nqbQ6ryXMGxXpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+
 @endsection
