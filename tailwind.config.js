@@ -12,6 +12,7 @@ module.exports = {
             fontFamily: {
                 mono: ['"IBM Plex Mono"', ...defaultTheme.fontFamily.mono],
                 heading: ["'Press Start 2P'", ...defaultTheme.fontFamily.mono],
+                sans: ["Ubuntu", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 pallette: {

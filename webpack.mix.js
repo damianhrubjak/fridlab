@@ -17,6 +17,9 @@ mix.js("resources/js/app.js", "public/js")
     .js("resources/js/splide.js", "public/js")
     .js("resources/js/map.js", "public/js")
     .postCss("resources/postcss/app.pcss", "public/css")
+    // ADMIN
+    .js("resources/js/admin/admin.js", "public/js/")
+    .postCss("resources/postcss/admin/admin.pcss", "public/css/admin.css")
     .copy(
         "node_modules/@splidejs/splide/dist/css/splide-core.min.css",
         "public/css/vendor"
