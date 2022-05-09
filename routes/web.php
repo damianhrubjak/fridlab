@@ -19,4 +19,5 @@ Route::group(['as' => 'fe-pages.'], function () {
     Route::get('/blog', [FrontendController::class, 'blogPage'])->name('blog');
     Route::get('/3d-modely', [FrontendController::class, 'modelsPage'])->name('3d-models');
     Route::get('/kontakt', [FrontendController::class, 'contactPage'])->name('contact');
+    Route::get('/prihlasenie', [FrontendController::class, 'loginPage'])->name('login');
 });
