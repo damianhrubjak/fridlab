@@ -21,11 +21,12 @@
     </div>
 
     <div class="flex justify-center gap-32 bg-slate-900 py-4">
-        <a href="#"><i
+        <a href="{{ route('fe-pages.home') }}"><i
                 class="fa-solid fa-arrow-left-long icon-link text-3xl text-white transition duration-300"></i></a>
-        <a href="#"><i
-                class="fa-solid fa-arrow-right-from-bracket icon-link text-3xl text-white transition duration-300"></i></a>
-
-
+        <form action="{{ route('auth.logout') }}" method="POST">
+            @csrf
+            <button type="submit"><i
+                    class="fa-solid fa-arrow-right-from-bracket icon-link text-3xl text-white transition duration-300"></i></button>
+        </form>
     </div>
 </aside>
