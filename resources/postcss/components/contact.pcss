@@ -36,3 +36,25 @@
 .leaflet-top.leaflet-left {
     @apply z-[400];
 }
+
+.custom-checkbox {
+    @apply relative cursor-pointer text-lg;
+
+    input[type="checkbox"] {
+        @apply absolute left-0 top-0 z-10 m-0 h-full w-full appearance-none bg-transparent;
+    }
+
+    .checker {
+        content: "";
+        @apply mr-4 flex h-8 w-8 items-center justify-center border-2 border-pallette-yellow bg-[#f5ed10] bg-opacity-10 text-xl text-white text-opacity-0 transition duration-300;
+    }
+
+    &:hover {
+        .checker {
+            @apply bg-opacity-20 text-opacity-70;
+        }
+    }
+    input[type="checkbox"]:checked + .checker {
+        @apply bg-opacity-100 text-black text-opacity-100;
+    }
+}
