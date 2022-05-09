@@ -36,4 +36,16 @@
         </div>
     </section>
 
+    <section class="page-section bg-pallette-black border-pallette-blue border-y-2">
+        <div class="page-wrapper" id="react-mount-contact-form"></div>
+    </section>
+
+    <section class="page-section">
+
+    </section>
+
+@endsection
+
+@section('scripts')
+    <script src="{{ request()->getSchemeAndHttpHost() . mix('js/react-contact-form.js') }}"></script>
 @endsection
