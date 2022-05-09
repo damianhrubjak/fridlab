@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// FE pages
 Route::group(['as' => 'fe-pages.'], function () {
     Route::get('/', [FrontendController::class, 'homePage'])->name('home');
     Route::get('/blog', [FrontendController::class, 'blogPage'])->name('blog');
@@ -22,3 +24,13 @@ Route::group(['as' => 'fe-pages.'], function () {
     Route::get('/prihlasenie', [FrontendController::class, 'loginPage'])->name('login');
     Route::get('/admin', [FrontendController::class, 'adminPage'])->name('admin');
 });
+
+
+// AUTH
+Route::group(
+    ['as' => 'auth.'],
+    function () {
+        Route::post('/login', [AuthController::class, 'store'])->middleware(['guest'])->name('login');
+        Route::post('/logout', [AuthController::class, 'destroy'])->middleware('auth')->name('logout');
+    }
+);
