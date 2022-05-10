@@ -16,7 +16,7 @@
                 <span>Blog</span>
             </a>
             <a class="nav-link-item {{ request()->routeIs('admin-pages.modely.*') ? 'admin-active' : '' }}"
-                href="{{ route('admin-pages.blogy.index') }}">
+                href="{{ route('admin-pages.modely.index') }}">
                 <span><i class="fa-solid fa-cubes"></i></span>
                 <span>3D modely</span>
             </a>
