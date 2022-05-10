@@ -14,7 +14,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.blogs');
+        $blogs = Blog::with('image')->get();
+        return view('admin.pages.blogs', compact('blogs'));
     }
 
     /**
@@ -46,7 +47,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        return "oék";
     }
 
     /**

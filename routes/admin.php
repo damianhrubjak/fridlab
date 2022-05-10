@@ -18,5 +18,6 @@ use App\Http\Controllers\BlogController;
 // Admin pages
 Route::group(['as' => 'admin-pages.', 'middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('/', [BackEndController::class, 'homePage'])->name('home');
-    Route::resource('/blogy', BlogController::class)->parameters(['blogy' => 'blog']);
+
+    Route::resource('/blogy', BlogController::class)->parameters(['blogy' => 'blog:slug']);
 });
