@@ -18,7 +18,7 @@ if (!function_exists('generateRandomString')) {
      * @param length $length length of generated string
      * @return string random string with unique_id
      */
-    function generateRandomString($length = 10)
+    function generateRandomString($length = 10, $addExtraHash = true)
     {
         $characters = '123456789abcdefghijklmnopqrstuvwxyz';
         $charactersLength = strlen($characters);
@@ -27,7 +27,8 @@ if (!function_exists('generateRandomString')) {
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         }
         $uniqueid = str_replace(".", "", uniqid('', true));
-        return str_shuffle(strtolower($uniqueid) . $randomString);
+
+        return $addExtraHash ? str_shuffle(strtolower($uniqueid) . $randomString) : str_shuffle($randomString);
     }
 }
 
