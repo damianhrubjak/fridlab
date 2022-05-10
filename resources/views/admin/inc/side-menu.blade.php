@@ -10,12 +10,13 @@
                 <span><i class="fa-solid fa-house-chimney"></i></span>
                 <span>Domov</span>
             </a>
-            <a class="nav-link-item {{ request()->routeIs('admin-pages.blogy.index') ? 'admin-active' : '' }}"
+            <a class="nav-link-item {{ request()->routeIs('admin-pages.blogy.*') ? 'admin-active' : '' }}"
                 href="{{ route('admin-pages.blogy.index') }}">
                 <span><i class="fa-solid fa-comment-dots"></i></span>
                 <span>Blog</span>
             </a>
-            <a class="nav-link-item" href="">
+            <a class="nav-link-item {{ request()->routeIs('admin-pages.modely.*') ? 'admin-active' : '' }}"
+                href="{{ route('admin-pages.blogy.index') }}">
                 <span><i class="fa-solid fa-cubes"></i></span>
                 <span>3D modely</span>
             </a>
