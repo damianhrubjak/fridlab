@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('source_path', 191);
             $table->string('file_name', 191);
+            $table->string('slug', 191);
             $table->string('size', 30);
             $table->timestamps();
         });
