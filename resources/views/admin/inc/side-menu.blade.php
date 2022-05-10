@@ -22,13 +22,17 @@
         </div>
     </div>
 
-    <div class="flex justify-center gap-32 bg-slate-900 py-4">
-        <a href="{{ route('fe-pages.home') }}"><i
-                class="fa-solid fa-arrow-left-long icon-link text-3xl text-white transition duration-300"></i></a>
-        <form action="{{ route('auth.logout') }}" method="POST">
+    <div class="flex justify-center gap-8 bg-slate-900 px-2 py-4">
+        <a href="{{ route('fe-pages.home') }}" class="icon-link w-1/2 text-center text-white transition duration-300">
+            <i class="fa-solid fa-arrow-left-long text-3xl"></i>
+            <p class="mt-2">Naspäť na web</p>
+        </a>
+        <form action="{{ route('auth.logout') }}" method="POST" class="m-0 w-1/2 text-center">
             @csrf
-            <button type="submit"><i
-                    class="fa-solid fa-arrow-right-from-bracket icon-link text-3xl text-white transition duration-300"></i></button>
+            <button type="submit" class="icon-link text-center text-white transition duration-300"><i
+                    class="fa-solid fa-arrow-right-from-bracket text-3xl"></i>
+                <p class="mt-2">Odhlásiť sa</p>
+            </button>
         </form>
     </div>
 </aside>
