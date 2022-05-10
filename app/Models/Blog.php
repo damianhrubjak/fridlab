@@ -25,4 +25,9 @@ class Blog extends Model
             ]
         ];
     }
+
+    public function image()
+    {
+        return $this->hasOne(File::class, 'id', 'file_id');
+    }
 }
