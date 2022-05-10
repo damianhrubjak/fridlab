@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BackEndController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,5 @@ use App\Http\Controllers\BackEndController;
 // Admin pages
 Route::group(['as' => 'admin-pages.', 'middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('/', [BackEndController::class, 'homePage'])->name('home');
+    Route::resource('/blogy', BlogController::class)->parameters(['blogy' => 'blog']);
 });
