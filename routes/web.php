@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,11 @@ Route::group(
         Route::post('/logout', [AuthController::class, 'destroy'])->middleware('auth')->name('logout');
     }
 );
+
+
+// Files
+Route::get('/subor/{file:slug}', [FileController::class, 'serveForUrl'])->name('file-serve');
+Route::get('/nahladovy-obrazok/{file:slug}', [FileController::class, 'serveThumbnailForUrl'])->name('file-thumbnail-serve');
 
 //* Admin
 require __DIR__ . '/admin.php';
