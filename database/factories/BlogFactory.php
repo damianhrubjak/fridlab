@@ -18,7 +18,8 @@ class BlogFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(4, true),
-            'text' => implode(PHP_EOL . PHP_EOL, $this->faker->paragraphs(20))
+            'text' => implode(PHP_EOL . PHP_EOL, $this->faker->paragraphs(20)),
+            'file_id' => 1
         ];
     }
 }
