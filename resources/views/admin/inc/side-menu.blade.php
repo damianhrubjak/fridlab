@@ -5,11 +5,13 @@
             <img class="w-full" src="{{ asset('images/Logo/FriDLab-logo-transparent.svg') }}" alt="LOGO">
         </div>
         <div class="mt-16">
-            <a class="nav-link-item" href="{{ route('admin-pages.home') }}">
+            <a class="nav-link-item {{ request()->routeIs('admin-pages.home') ? 'admin-active' : '' }}"
+                href="{{ route('admin-pages.home') }}">
                 <span><i class="fa-solid fa-house-chimney"></i></span>
                 <span>Domov</span>
             </a>
-            <a class="nav-link-item" href="{{ route('admin-pages.blogy.index') }}">
+            <a class="nav-link-item {{ request()->routeIs('admin-pages.blogy.index') ? 'admin-active' : '' }}"
+                href="{{ route('admin-pages.blogy.index') }}">
                 <span><i class="fa-solid fa-comment-dots"></i></span>
                 <span>Blog</span>
             </a>
