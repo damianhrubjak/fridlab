@@ -22,9 +22,9 @@
             </div>
 
 
-            <div class="mb-5 flex h-80 flex-col">
+            <div class="mb-5 flex flex-col">
                 <label for="">Váš text</label>
-                <textarea class="h-full py-3 px-6 text-xl" id=""></textarea>
+                <textarea class="h-full py-3 px-6 text-xl" id="textarea-tinymce"></textarea>
             </div>
 
 
@@ -39,4 +39,8 @@
 @endsection
 
 @section('scripts')
+    <script src="https://cdn.tiny.cloud/1/{{ env('MIX_TINY_MCE_API_KEY') }}/tinymce/6/tinymce.min.js"></script>
+    <script>
+        tinyMCEInitializer(tinymce, '#textarea-tinymce');
+    </script>
 @endsection

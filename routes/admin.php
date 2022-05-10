@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BackEndController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\PrintModelController;
 
 /*
@@ -23,4 +24,6 @@ Route::group(['as' => 'admin-pages.', 'middleware' => ['auth'], 'prefix' => 'adm
     Route::resource('/blogy', BlogController::class)->parameters(['blogy' => 'blog:slug']);
 
     Route::resource('/modely', PrintModelController::class)->parameters(['modely' => 'model:slug']);
+
+    Route::post('/upload-image', [FileController::class, 'store'])->name('file-store');
 });
