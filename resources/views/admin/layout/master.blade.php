@@ -23,7 +23,7 @@
 
     @include('admin.inc.side-menu')
 
-    <main>
+    <main class="page-wrapper">
         @yield('page-content')
     </main>
 
