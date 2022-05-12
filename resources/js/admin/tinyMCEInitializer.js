@@ -56,10 +56,5 @@ const tinyMCEInitializer = (tinymce, selector) =>
         images_upload_handler: uploadHandler,
     });
 
-const saveTinyMCEContent = (tinymce) => {
-    tinymce.activeEditor.getContent();
-};
-
 // Add to window object, to make tinyMCEInitializer function available for whole document
 window.tinyMCEInitializer = tinyMCEInitializer;
-window.saveTinyMCEContent = saveTinyMCEContent;
