@@ -54,6 +54,7 @@ const tinyMCEInitializer = (tinymce, selector) =>
             "body { font-family:Ubuntu,sans-serif;}",
         language: "sk",
         images_upload_handler: uploadHandler,
+        height: "800",
     });
 
 // Add to window object, to make tinyMCEInitializer function available for whole document
