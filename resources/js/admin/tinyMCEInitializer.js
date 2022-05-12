@@ -55,7 +55,7 @@ const tinyMCEInitializer = (tinymce, selector) =>
         language: "sk",
         images_upload_handler: uploadHandler,
         setup: (editor) =>
-            editor.on("blur", () => {
+            editor.on("change", () => {
                 tinymce.triggerSave();
             }),
     });
