@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AddBlogRequest;
 use App\Models\Blog;
+use App\Services\FileService;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -34,9 +36,13 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddBlogRequest $request)
     {
-        //
+        $blogData = $request->all();
+        $image = FileService::saveFile($request->file('image'), 'images/', 'images');
+        $blogData['file_id'] = $image->id;
+        Blog::create($blogData);
+        return redirect()->back()->with('success', 'úspešne vytvorený');
     }
 
     /**

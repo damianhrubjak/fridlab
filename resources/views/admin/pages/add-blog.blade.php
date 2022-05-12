@@ -9,22 +9,35 @@
     </div>
 
     <div class="mt-20 flex h-full w-full items-center justify-center">
-        <form class="w-[80%]" action="{{ route('admin-pages.blogy.store') }}">
+        @if ($errors->any())
+            <div class="mb-8 bg-rose-800 p-4">
+                <h2 class="font-heading">Chyby</h2>
+
+                <ul class="mt-4 w-full list-disc pl-4">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <form enctype="multipart/form-data" class="w-[80%]" action="{{ route('admin-pages.blogy.store') }}"
+            method="POST">
+            @csrf
             <div class="flex gap-5">
                 <div class="flex w-1/2 flex-col">
                     <label for="">Nadpis blogu</label>
-                    <input class="py-3 px-6 text-xl" type="text">
+                    <input name="title" value="{{ old('title') }}" class="py-3 px-6 text-xl" type="text">
                 </div>
                 <div class="flex w-1/2 flex-col">
                     <label for="">Obrázok blogu</label>
-                    <input class="bg-white py-3 px-6 text-xl" type="file">
+                    <input name="image" class="bg-white py-3 px-6 text-xl" type="file">
                 </div>
             </div>
 
 
             <div class="mb-5 flex flex-col">
                 <label for="">Váš text</label>
-                <textarea class="h-full py-3 px-6 text-xl" id="textarea-tinymce"></textarea>
+                <textarea name="text" class="h-full py-3 px-6 text-xl" id="textarea-tinymce">{{ old('text') }}</textarea>
             </div>
 
 
