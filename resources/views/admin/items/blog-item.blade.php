@@ -9,7 +9,7 @@
         <div>
             <h2 class="mb-2 text-3xl font-bold">{{ $blog->title }}</h2>
 
-            <p>{{ addThreeDots(strip_tags($blog->text), 200) }}</p>
+            <p>{{ addThreeDots(strip_tags(html_entity_decode($blog->text)), 200) }}</p>
         </div>
 
         <div class="w-full"> <a

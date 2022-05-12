@@ -13,7 +13,7 @@ class FrontEndController extends Controller
 
     public function blogPage()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::with('image')->latest()->get();
         return view('pages.blog', compact('blogs'));
     }
 

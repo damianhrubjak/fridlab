@@ -16,7 +16,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::with('image')->get();
+        $blogs = Blog::with('image')->latest()->get();
         return view('admin.pages.blogs', compact('blogs'));
     }
 
@@ -38,10 +38,17 @@ class BlogController extends Controller
      */
     public function store(AddBlogRequest $request)
     {
-        $blogData = $request->all();
+        // Store main image
         $image = FileService::saveFile($request->file('image'), 'images/', 'images');
+
+        // Create blog data
+        $blogData = $request->all();
         $blogData['file_id'] = $image->id;
+
+        // Store blog to DB
         Blog::create($blogData);
+
+        // Send successful response
         return redirect()->back()->with('success', 'úspešne vytvorený');
     }
 
