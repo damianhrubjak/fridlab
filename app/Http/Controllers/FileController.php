@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AddImageRequest;
 use App\Models\File;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
@@ -15,9 +15,25 @@ class FileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddImageRequest $request)
     {
-        //
+        $pathPrefix = 'images/';
+        $image = $request->file('image');
+        $path = generateRandomString(15);
+
+        $fileData['file_name'] = $image->getClientOriginalName();
+        $fileData['size'] = $image->getSize();
+        // Store file
+        $fileData['source_path'] = $pathPrefix . $image->store($path, ['disk' => 'images']);
+
+        // get path and folder
+        $this->createThumbnail($pathPrefix . $path . "/", $image->hashName());
+
+        // Store data to DB
+        $newFile = File::create($fileData);
+
+        // Send back URL with uploaded image
+        return response()->json(['url' => route('file-thumbnail-serve', $newFile->slug)]);
     }
 
     /**
@@ -69,7 +85,7 @@ class FileController extends Controller
         $source = Storage::path($folder . $filename);
         $dest = Storage::path($folder . 'thumbnail_' . $filename);
 
-        Image::make($source)->resize(600, 340, function ($constraint) {
+        Image::make($source)->resize(1000, 562.5, function ($constraint) {
             $constraint->aspectRatio();
             $constraint->upsize();
         })->save($dest, 70);

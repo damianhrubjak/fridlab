@@ -18,11 +18,7 @@ const uploadHandler = (blobInfo, progress) =>
                 }
             );
 
-            console.log(response);
-
-            resolve(
-                "http://fridlab.test/subor/harry-cunningham-l0nlg8t7zho-unsplash-nmr4t"
-            );
+            resolve(response.data.url);
         } catch (error) {
             reject(error);
         }
