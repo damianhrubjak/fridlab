@@ -1,5 +1,5 @@
 <div class="w-full">
-    <div class="w-full">
+    <div class="blog-img relative w-full transition duration-300">
         <img src="{{ asset('images/milestones/milestone-3.jpg') }}" alt="" class="h-64 w-full object-cover">
     </div>
     <div class="bg-pallette-black relative w-full p-4">
