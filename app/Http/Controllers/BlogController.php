@@ -60,7 +60,8 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        return "oék";
+        $blog->load('image');
+        return view('admin.pages.show-blog', compact('blog'));
     }
 
     /**
