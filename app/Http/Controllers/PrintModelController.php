@@ -24,7 +24,7 @@ class PrintModelController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.add-model');
     }
 
     /**

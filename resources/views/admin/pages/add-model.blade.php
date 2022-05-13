@@ -1,6 +1,6 @@
 @extends('admin.layout.master')
 
-@section('page-title', 'Pridať blog')
+@section('page-title', 'Pridať model')
 
 @section('page-content')
 
@@ -39,12 +39,14 @@
                 @csrf
                 <div class="flex gap-5">
                     <div class="flex w-1/2 flex-col">
-                        <label for="">Nadpis blogu</label>
+                        <label for="">Nadpis Modelu</label>
                         <input name="title" value="{{ old('title') }}" class="py-3 px-6 text-xl" type="text">
                     </div>
-                    <div class="flex w-1/2 flex-col">
-                        <label for="">Obrázok blogu</label>
-                        <input name="image" class="bg-white py-3 px-6 text-xl" type="file">
+                    <div class="flex w-1/2">
+                        <label for="image-id" class="relative w-full">Obrázok modelu
+                            <input id="image-id" name="image"
+                                class="absolute top-0 left-0 h-full w-full bg-white py-3 px-6 text-xl" type="file">
+                        </label>
                     </div>
                 </div>
 

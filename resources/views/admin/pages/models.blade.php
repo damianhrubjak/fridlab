@@ -12,5 +12,18 @@
         </div>
     </div>
 
+    <div class="model-items grid gap-4">
+        @include('admin.items.model-item')
+        @include('admin.items.model-item')
+        @include('admin.items.model-item')
+        @include('admin.items.model-item')
+        @include('admin.items.model-item')
+        @include('admin.items.model-item')
+        @include('admin.items.model-item')
+        @include('admin.items.model-item')
+        @include('admin.items.model-item')
+
+    </div>
+
 
 @endsection
