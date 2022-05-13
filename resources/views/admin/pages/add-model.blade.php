@@ -13,12 +13,12 @@
         @if (Session::get('success'))
             <div class="mb-5 w-4/5 bg-green-700 bg-opacity-50 py-2 px-5 text-2xl">
                 <div class="flex items-center justify-between">
-                    <p class="font-bold text-white">Blog bol úspešne pridaný!</p>
+                    <p class="font-bold text-white">Model bol úspešne pridaný!</p>
                     <i class="fa-solid fa-circle-check text-white"></i>
                 </div>
                 <div class="flex items-center justify-center">
-                    <a href="{{ route('admin-pages.blogy.index') }}"
-                        class="block text-base font-bold text-white underline">Späť na blogy</a>
+                    <a href="{{ route('admin-pages.modely.index') }}"
+                        class="block text-base font-bold text-white underline">Späť na Modely</a>
                 </div>
             </div>
         @endif
@@ -35,7 +35,7 @@
                     </ul>
                 </div>
             @endif
-            <form enctype="multipart/form-data" action="{{ route('admin-pages.blogy.store') }}" method="POST">
+            <form enctype="multipart/form-data" action="{{ route('admin-pages.modely.store') }}" method="POST">
                 @csrf
                 <div class="flex w-full flex-col">
                     <label for="">Nadpis Modelu</label>
@@ -63,7 +63,7 @@
                             <p class="mt-2 font-bold">.3mf, .stl</p>
                             <div custom-file-input-files class="mt-6 flex flex-wrap gap-2"></div>
                         </div>
-                        <input id="image-id" name="images[]" class="absolute top-0 h-full w-full cursor-pointer opacity-0"
+                        <input id="image-id" name="models[]" class="absolute top-0 h-full w-full cursor-pointer opacity-0"
                             type="file" multiple accept=".3mf,.stl">
                     </label>
                 </div>

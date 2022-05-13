@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\PrintModel;
 use Illuminate\Http\Request;
+use App\Services\FileService;
+use App\Http\Requests\AddModelRequest;
 
 class PrintModelController extends Controller
 {
@@ -33,9 +35,37 @@ class PrintModelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddModelRequest $request)
     {
-        //
+
+        $models_ids = [];
+
+        $images_ids = [];
+
+        // Store images
+        $modelImages = $request->file('images');
+
+
+        foreach ($modelImages as $modelImage) {
+            $newImage = FileService::saveFile($modelImage, 'images/', 'images');
+            $images_ids[] = $newImage->id;
+        }
+
+        // Store files
+        $modelFiles = $request->file('models');
+        foreach ($modelFiles as $modelFile) {
+            $newFile = FileService::saveFile($modelFile, 'models/', 'models');
+            $models_ids[] = $newFile->id;
+        }
+
+        // Store model to DB
+        $newPrintModel = PrintModel::create($request->all());
+
+        $newPrintModel->files()->attach($images_ids);
+        $newPrintModel->files()->attach($models_ids);
+
+        // Send successful response
+        return redirect()->back()->with('success', 'úspešne vytvorený');
     }
 
     /**
