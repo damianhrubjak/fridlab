@@ -37,15 +37,23 @@
             @endif
             <form enctype="multipart/form-data" action="{{ route('admin-pages.blogy.store') }}" method="POST">
                 @csrf
-                <div class="flex gap-5">
-                    <div class="flex w-1/2 flex-col">
-                        <label for="">Nadpis blogu</label>
-                        <input name="title" value="{{ old('title') }}" class="py-3 px-6 text-xl" type="text">
-                    </div>
-                    <div class="flex w-1/2 flex-col">
-                        <label for="">Obrázok blogu</label>
-                        <input name="image" class="bg-white py-3 px-6 text-xl" type="file">
-                    </div>
+                <div class="flex w-full flex-col">
+                    <label for="">Nadpis blogu</label>
+                    <input name="title" value="{{ old('title') }}" class="rounded-xl py-3 px-6 text-xl" type="text">
+                </div>
+
+
+                <div class="my-6 flex w-full">
+                    <label custom-file-input
+                        class="relative flex min-h-[8rem] w-full cursor-pointer items-center justify-center rounded-xl border-4 border-dashed border-slate-700 bg-slate-200">
+                        <div class="w-full p-4">
+                            <h3 class="text-xl">Nahrajte obrazky blogu</h3>
+                            <p class="mt-2 font-bold">.png, .jpg, .jpeg, .gif, .tif, .bmp, .webp</p>
+                            <div custom-file-input-files class="mt-6 flex flex-wrap gap-2"></div>
+                        </div>
+                        <input id="image-id" name="image" class="absolute top-0 h-full w-full cursor-pointer opacity-0"
+                            type="file" accept=".png,.jpg,.jpeg,.gif,.tif,.bmp,.webp">
+                    </label>
                 </div>
 
 

@@ -6,7 +6,7 @@ fileLabels.forEach((label) => {
     fileInput.addEventListener("change", (e) => {
         let html = "";
         Array.from(e.target.files).map((file) => {
-            html += `<div class="flex gap-2 font-bold bg-slate-800 text-white py-1 px-2"><p>${
+            html += `<div class="flex gap-2 font-bold rounded-md bg-slate-800 text-white py-1 px-2"><p>${
                 file.name
             }</p><p class="text-pallette-yellow">${
                 Math.round((file.size / 1000000) * 100) / 100

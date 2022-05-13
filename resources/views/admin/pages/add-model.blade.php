@@ -39,12 +39,12 @@
                 @csrf
                 <div class="flex w-full flex-col">
                     <label for="">Nadpis Modelu</label>
-                    <input name="title" value="{{ old('title', 'model') }}" class="py-3 px-6 text-xl" type="text">
+                    <input name="title" value="{{ old('title') }}" class="rounded-xl py-3 px-6 text-xl" type="text">
                 </div>
 
                 <div class="mt-6 flex w-full">
                     <label custom-file-input
-                        class="relative flex min-h-[8rem] w-full cursor-pointer items-center justify-center border-4 border-dashed border-slate-700 bg-slate-200">
+                        class="relative flex min-h-[8rem] w-full cursor-pointer items-center justify-center rounded-xl border-4 border-dashed border-slate-700 bg-slate-200">
                         <div class="w-full p-4">
                             <h3 class="text-xl">Nahrajte obrazky</h3>
                             <p class="mt-2 font-bold">.png, .jpg, .jpeg, .gif, .tif, .bmp, .webp</p>
@@ -57,7 +57,7 @@
 
                 <div class="mt-6 flex w-full">
                     <label custom-file-input
-                        class="relative flex min-h-[8rem] w-full cursor-pointer items-center justify-center border-4 border-dashed border-slate-700 bg-slate-200">
+                        class="relative flex min-h-[8rem] w-full cursor-pointer items-center justify-center rounded-xl border-4 border-dashed border-slate-700 bg-slate-200">
                         <div class="w-full p-4">
                             <h3 class="text-xl">Nahrajte modely</h3>
                             <p class="mt-2 font-bold">.3mf, .stl</p>
@@ -70,7 +70,7 @@
 
                 <div class="my-5 flex flex-col">
                     <label for="">Váš text</label>
-                    <textarea name="text" class="h-96 py-3 px-6 text-xl" id="textarea-tinymce">{{ old('text', 'model') }}</textarea>
+                    <textarea name="text" class="h-96 py-3 px-6 text-xl" id="textarea-tinymce">{{ old('text') }}</textarea>
                 </div>
 
 
