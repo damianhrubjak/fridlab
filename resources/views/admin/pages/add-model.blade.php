@@ -39,7 +39,7 @@
                 @csrf
                 <div class="flex w-full flex-col">
                     <label for="">Nadpis Modelu</label>
-                    <input name="title" value="{{ old('title') }}" class="py-3 px-6 text-xl" type="text">
+                    <input name="title" value="{{ old('title', 'model') }}" class="py-3 px-6 text-xl" type="text">
                 </div>
 
                 <div class="mt-6 flex w-full">
@@ -70,7 +70,7 @@
 
                 <div class="my-5 flex flex-col">
                     <label for="">Váš text</label>
-                    <textarea name="text" class="h-96 py-3 px-6 text-xl" id="textarea-tinymce">{{ old('text') }}</textarea>
+                    <textarea name="text" class="h-96 py-3 px-6 text-xl" id="textarea-tinymce">{{ old('text', 'model') }}</textarea>
                 </div>
 
 

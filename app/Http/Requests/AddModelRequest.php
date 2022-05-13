@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\ModelFile;
 use Illuminate\Foundation\Http\FormRequest;
 
 class AddModelRequest extends FormRequest
@@ -25,7 +26,7 @@ class AddModelRequest extends FormRequest
     {
         return [
             'images.*' => 'required|mimes:png,jpg,jpeg,gif,tif,bmp,webp',
-            'models.*' => 'required|mime:stl,3mf',
+            'models.*' => ['required', new ModelFile],
             'title' => 'required|max:191|min:3|unique:print_models,title',
             'text' => 'required|min:3|max:16777215'
         ];

@@ -37,18 +37,20 @@ class PrintModelController extends Controller
      */
     public function store(AddModelRequest $request)
     {
-
         $models_ids = [];
-
+        $mainImageId = null;
         $images_ids = [];
 
         // Store images
         $modelImages = $request->file('images');
-
-
-        foreach ($modelImages as $modelImage) {
+        foreach ($modelImages as $key => $modelImage) {
             $newImage = FileService::saveFile($modelImage, 'images/', 'images');
-            $images_ids[] = $newImage->id;
+
+            if ($key === 0) {
+                $mainImageId = $newImage->id;
+            } else {
+                $images_ids[] = $newImage->id;
+            }
         }
 
         // Store files
@@ -61,8 +63,12 @@ class PrintModelController extends Controller
         // Store model to DB
         $newPrintModel = PrintModel::create($request->all());
 
-        $newPrintModel->files()->attach($images_ids);
-        $newPrintModel->files()->attach($models_ids);
+        // Attach files to M:N table
+        $newPrintModel->files()->attach($mainImageId, ['type' => 'main_image']);
+        if (count($images_ids) > 0) {
+            $newPrintModel->files()->attach($images_ids, ['type' => 'image']);
+        }
+        $newPrintModel->files()->attach($models_ids, ['type' => 'file']);
 
         // Send successful response
         return redirect()->back()->with('success', 'úspešne vytvorený');

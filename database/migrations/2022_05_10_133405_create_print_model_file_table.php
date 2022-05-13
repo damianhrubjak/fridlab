@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('print_models_files', function (Blueprint $table) {
+        Schema::create('print_model_file', function (Blueprint $table) {
             $table->primary(['print_model_id', 'file_id']);
             $table->bigInteger('print_model_id', false, true);
             $table->bigInteger('file_id', false, true);
+            $table->enum('type', ['image', 'main_image', 'file']);
             $table->timestamps();
 
             $table->foreign("print_model_id")->references("id")->on("print_models")->onDelete("cascade");

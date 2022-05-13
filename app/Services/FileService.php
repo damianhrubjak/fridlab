@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Http\Requests\AddImageRequest;
 use App\Models\File;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use phpDocumentor\Reflection\Types\Self_;
@@ -14,14 +15,17 @@ class FileService
     public static function saveFile(UploadedFile $file, $pathPrefix, $diskName)
     {
         $path = generateRandomString(15);
+        $fileName = generateRandomString(25) . '.' . $file->getClientOriginalExtension();
 
         $fileData['file_name'] = $file->getClientOriginalName();
         $fileData['size'] = $file->getSize();
         // Store file
-        $fileData['source_path'] = $pathPrefix . $file->store($path, ['disk' => $diskName]);
+        $fileData['source_path'] = $pathPrefix . $file->storeAs($path, $fileName, ['disk' => $diskName]);
 
         // get path and folder
-        self::createThumbnail($pathPrefix . $path . "/", $file->hashName());
+        if (is_array(getimagesize(Storage::path($fileData['source_path'])))) {
+            self::createThumbnail($pathPrefix . $path . "/", $fileName);
+        }
 
         // Store data to DB
         $newFile = File::create($fileData);
