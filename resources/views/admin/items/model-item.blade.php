@@ -1,10 +1,9 @@
-<div class="bg-pallette-black max-w-md text-white">
+<div class="bg-pallette-black text-white">
     <div>
         @php
-            $mainImage = $printModel->files->firstWhere('type', 'main_image');
-            dd($mainImage);
+            $mainImage = $printModel->files->where('pivot.type', 'main_image')->first();
         @endphp
-        <img src="{{ route('file-thumbnail-serve', $mainImage->slug) }}" alt="IMAGE">
+        <img src="{{ route('file-thumbnail-serve', $mainImage->slug) }}" alt="IMAGE" class="w-full object-cover">
     </div>
     <div class="p-3">
 

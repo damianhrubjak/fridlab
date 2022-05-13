@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="model-items grid gap-4">
+    <div class="grid grid-cols-5 gap-4">
 
         @foreach ($printModels as $printModel)
             @include('admin.items.model-item', compact('printModel'))

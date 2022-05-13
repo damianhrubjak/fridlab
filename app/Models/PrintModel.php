@@ -28,6 +28,6 @@ class PrintModel extends Model
 
     public function files()
     {
-        return $this->belongsToMany(File::class, 'print_model_file', 'print_model_id', 'file_id');
+        return $this->belongsToMany(File::class, 'print_model_file', 'print_model_id', 'file_id')->withPivot('type');
     }
 }
