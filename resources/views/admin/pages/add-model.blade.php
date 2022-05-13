@@ -5,7 +5,7 @@
 @section('page-content')
 
     <div class="mb-8">
-        <h1 class="text-7xl font-bold text-slate-700">Pridať Blog</h1>
+        <h1 class="text-7xl font-bold text-slate-700">Pridať 3D model</h1>
     </div>
 
     <div class="mt-20 flex h-full w-full flex-col items-center justify-center">
@@ -37,21 +37,38 @@
             @endif
             <form enctype="multipart/form-data" action="{{ route('admin-pages.blogy.store') }}" method="POST">
                 @csrf
-                <div class="flex gap-5">
-                    <div class="flex w-1/2 flex-col">
-                        <label for="">Nadpis Modelu</label>
-                        <input name="title" value="{{ old('title') }}" class="py-3 px-6 text-xl" type="text">
-                    </div>
-                    <div class="flex w-1/2">
-                        <label for="image-id" class="relative w-full">Obrázok modelu
-                            <input id="image-id" name="image"
-                                class="absolute top-0 left-0 h-full w-full bg-white py-3 px-6 text-xl" type="file">
-                        </label>
-                    </div>
+                <div class="flex w-full flex-col">
+                    <label for="">Nadpis Modelu</label>
+                    <input name="title" value="{{ old('title') }}" class="py-3 px-6 text-xl" type="text">
                 </div>
 
+                <div class="mt-6 flex w-full">
+                    <label custom-file-input
+                        class="relative flex min-h-[8rem] w-full cursor-pointer items-center justify-center border-4 border-dashed border-slate-700 bg-slate-200">
+                        <div class="w-full p-4">
+                            <h3 class="text-xl">Nahrajte obrazky</h3>
+                            <p class="mt-2 font-bold">.png, .jpg, .jpeg, .gif, .tif, .bmp, .webp</p>
+                            <div custom-file-input-files class="mt-6 flex flex-wrap gap-2"></div>
+                        </div>
+                        <input id="image-id" name="images[]" class="absolute top-0 h-full w-full cursor-pointer opacity-0"
+                            type="file" multiple accept=".png,.jpg,.jpeg,.gif,.tif,.bmp,.webp">
+                    </label>
+                </div>
 
-                <div class="mb-5 flex flex-col">
+                <div class="mt-6 flex w-full">
+                    <label custom-file-input
+                        class="relative flex min-h-[8rem] w-full cursor-pointer items-center justify-center border-4 border-dashed border-slate-700 bg-slate-200">
+                        <div class="w-full p-4">
+                            <h3 class="text-xl">Nahrajte modely</h3>
+                            <p class="mt-2 font-bold">.3mf, .stl</p>
+                            <div custom-file-input-files class="mt-6 flex flex-wrap gap-2"></div>
+                        </div>
+                        <input id="image-id" name="images[]" class="absolute top-0 h-full w-full cursor-pointer opacity-0"
+                            type="file" multiple accept=".3mf,.stl">
+                    </label>
+                </div>
+
+                <div class="my-5 flex flex-col">
                     <label for="">Váš text</label>
                     <textarea name="text" class="h-96 py-3 px-6 text-xl" id="textarea-tinymce">{{ old('text') }}</textarea>
                 </div>
