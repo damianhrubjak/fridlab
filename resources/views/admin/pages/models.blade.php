@@ -13,15 +13,10 @@
     </div>
 
     <div class="model-items grid gap-4">
-        @include('admin.items.model-item')
-        @include('admin.items.model-item')
-        @include('admin.items.model-item')
-        @include('admin.items.model-item')
-        @include('admin.items.model-item')
-        @include('admin.items.model-item')
-        @include('admin.items.model-item')
-        @include('admin.items.model-item')
-        @include('admin.items.model-item')
+
+        @foreach ($printModels as $printModel)
+            @include('admin.items.model-item', compact('printModel'))
+        @endforeach
 
     </div>
 

@@ -16,7 +16,8 @@ class PrintModelController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.models');
+        $printModels = PrintModel::with('files')->latest()->get();
+        return view('admin.pages.models', compact('printModels'));
     }
 
     /**
