@@ -24,7 +24,7 @@ Route::group(['as' => 'admin-pages.', 'middleware' => ['auth'], 'prefix' => 'adm
 
     Route::resource('/blogy', BlogController::class)->parameters(['blogy' => 'blog:slug']);
 
-    Route::resource('/modely', PrintModelController::class)->parameters(['modely' => 'model:slug']);
+    Route::resource('/modely', PrintModelController::class)->parameters(['modely' => 'printModel:slug']);
 
     Route::resource('/kontakty', ContactController::class)->parameters(['kontakty' => 'contact'])->only(['index', 'show', 'destroy']);
 

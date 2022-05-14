@@ -83,7 +83,28 @@ class PrintModelController extends Controller
      */
     public function show(PrintModel $printModel)
     {
-        //
+        $printModels = PrintModel::with('files')->latest()->get();
+
+        $printModel->load('files');
+
+        $mainImage = null;
+        $images = [];
+        $downloadableFiles = [];
+
+        foreach ($printModel->files as $file) {
+            switch ($file->pivot->type) {
+                case 'image':
+                    $images[] = $file;
+                    break;
+                case 'file':
+                    $downloadableFiles[] = $file;
+                    break;
+                case 'main_image':
+                    $mainImage = $file;
+                    break;
+            }
+        }
+        return view('admin.pages.show-print-model', compact('printModel', 'printModels', 'mainImage', 'images', 'downloadableFiles'));
     }
 
     /**
