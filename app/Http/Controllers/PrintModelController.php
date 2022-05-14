@@ -6,6 +6,7 @@ use App\Models\PrintModel;
 use Illuminate\Http\Request;
 use App\Services\FileService;
 use App\Http\Requests\AddModelRequest;
+use App\Http\Requests\EditModelRequest;
 
 class PrintModelController extends Controller
 {
@@ -115,7 +116,7 @@ class PrintModelController extends Controller
      */
     public function edit(PrintModel $printModel)
     {
-        //
+        return view('admin.pages.edit-model', compact('printModel'));
     }
 
     /**
@@ -125,9 +126,10 @@ class PrintModelController extends Controller
      * @param  \App\Models\PrintModel  $printModel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PrintModel $printModel)
+    public function update(EditModelRequest $request, PrintModel $printModel)
     {
-        //
+        $printModel->update($request->all());
+        return redirect()->back()->with('success', 'úspešne vytvorený');
     }
 
     /**
