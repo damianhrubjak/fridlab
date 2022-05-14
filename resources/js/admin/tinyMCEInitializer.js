@@ -55,6 +55,9 @@ const tinyMCEInitializer = (tinymce, selector) =>
         language: "sk",
         images_upload_handler: uploadHandler,
         height: "800",
+        relative_urls: false,
+        remove_script_host: false,
+        document_base_url: location.origin,
     });
 
 // Add to window object, to make tinyMCEInitializer function available for whole document
