@@ -60,8 +60,9 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
+        $blogs = Blog::all();
         $blog->load('image');
-        return view('admin.pages.show-blog', compact('blog'));
+        return view('admin.pages.show-blog', compact('blog', 'blogs'));
     }
 
     /**
