@@ -24,7 +24,7 @@
 
     @include('admin.inc.side-menu')
 
-    <main class="page-wrapper {{ request()->routeIs('admin-pages.blogy.show') ? 'mr-auto w-4/5' : '' }}">
+    <main class="page-wrapper">
         @yield('page-content')
     </main>
 
