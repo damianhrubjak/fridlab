@@ -39,6 +39,7 @@ Route::group(
 // Files
 Route::get('/subor/{file:slug}', [FileController::class, 'serveForUrl'])->name('file-serve');
 Route::get('/nahladovy-obrazok/{file:slug}', [FileController::class, 'serveThumbnailForUrl'])->name('file-thumbnail-serve');
+Route::get('/stiahnut-subor/{file:slug}', [FileController::class, 'downloadFile'])->name('file-download');
 
 //* Admin
 require __DIR__ . '/admin.php';

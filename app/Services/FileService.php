@@ -97,6 +97,36 @@ class FileService
      * @param  \App\Models\File  $file
      * @return \Illuminate\Http\Response
      */
+    public static function downloadFile(File $file)
+    {
+        $fullPathToFile = Storage::path($file->source_path);
+
+        $headers = [
+            "Content-Disposition" => "attachment; file_name=" . $file->file_name,
+            "Pragma" => "no-cache",
+            "Content-Transfer-Encoding" => "Binary",
+            "Cache-Control" => "must-revalidate, post-check=0, pre-check=0",
+            "Expires" => "0"
+        ];
+
+        // Restrict image download
+        if (is_array(getimagesize($fullPathToFile))) {
+            return response("Naughty Naughty, don't do that.", 400);
+        }
+
+        if (file_exists($fullPathToFile)) {
+            return response()->download($fullPathToFile, $file->file_name, $headers, 'attachment');
+        } else {
+            return response('File not found.', 404);
+        }
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\File  $file
+     * @return \Illuminate\Http\Response
+     */
     public static function deleteFile(File $file)
     {
         //

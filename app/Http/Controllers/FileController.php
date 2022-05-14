@@ -48,6 +48,17 @@ class FileController extends Controller
     }
 
     /**
+     * Download file
+     *
+     * @param  \App\Models\File  $file
+     * @return \Illuminate\Http\Response
+     */
+    public function downloadFile(File $file)
+    {
+        return FileService::downloadFile($file);
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\File  $file
