@@ -2,10 +2,7 @@
     <div class="w-full overflow-y-scroll">
         <h2 class="bg-slate-900 px-4 py-8 text-2xl font-bold text-white">Blogy</h2>
         <div class="">
-            @foreach ($blogs as $b) @include(
-                'admin.items.side-blog-item',
-                compact(['b', 'blog'])
-            ) @endforeach
+            @foreach ($blogs as $menuBlog) @include('admin.items.side-blog-item', compact(['menuBlog', 'blog'])) @endforeach
         </div>
     </div>
     <div class="flex justify-center gap-8 bg-slate-900 px-2 py-4">
@@ -13,7 +10,8 @@
             <i class="fa-solid fa-trash text-3xl"></i>
             <p class="mt-2">Odstrániť</p>
         </a>
-        <a href="#" class="icon-link w-1/2 text-center text-white transition duration-300">
+        <a href="{{ route('admin-pages.blogy.edit', $blog->slug) }}"
+            class="icon-link w-1/2 text-center text-white transition duration-300">
             <i class="fa-solid fa-pen-to-square text-3xl"></i>
             <p class="mt-2">Upraviť</p>
         </a>

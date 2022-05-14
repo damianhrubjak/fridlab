@@ -1,6 +1,6 @@
 @extends('admin.layout.master')
 
-@section('page-title', 'Blog')
+@section('page-title', 'Kontakty')
 
 @section('page-content')
 

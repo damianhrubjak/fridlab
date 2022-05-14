@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AddBlogRequest;
+use App\Http\Requests\EditBlogRequest;
 use App\Models\Blog;
 use App\Services\FileService;
 use Illuminate\Http\Request;
@@ -73,7 +74,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('admin.pages.edit-blog', compact('blog'));
     }
 
     /**
@@ -83,9 +84,10 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(EditBlogRequest $request, Blog $blog)
     {
-        //
+        $blog->update($request->all());
+        return redirect()->back()->with('success', 'úspešne vytvorený');
     }
 
     /**
