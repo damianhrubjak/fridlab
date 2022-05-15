@@ -8,8 +8,8 @@
 
                 <a class="header-link {{ request()->routeIs('fe-pages.home') ? 'active' : '' }} block"
                     href="{{ route('fe-pages.home') }}">Domov</a>
-                <a class="header-link {{ request()->routeIs('fe-pages.blog') ? 'active' : '' }} block"
-                    href="{{ route('fe-pages.blog') }}">Blog</a>
+                <a class="header-link {{ request()->routeIs('fe-pages.blogy') || request()->routeIs('fe-pages.blogShowPage') ? 'active' : '' }} block"
+                    href="{{ route('fe-pages.blogy') }}">Blog</a>
                 <a class="header-link {{ request()->routeIs('fe-pages.3d-models') ? 'active' : '' }} block"
                     href="{{ route('fe-pages.3d-models') }}">3D Modely</a>
                 <a class="header-link {{ request()->routeIs('fe-pages.contact') ? 'active' : '' }} block"

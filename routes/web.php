@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 // FE pages
 Route::group(['as' => 'fe-pages.'], function () {
     Route::get('/', [FrontendController::class, 'homePage'])->name('home');
-    Route::get('/blog', [FrontendController::class, 'blogPage'])->name('blog');
+    Route::get('/blogy', [FrontendController::class, 'blogPage'])->name('blogy');
+    Route::get('/blogy/{blog:slug}', [FrontendController::class, 'showBlog'])->name('blogShowPage');
     Route::get('/3d-modely', [FrontendController::class, 'modelsPage'])->name('3d-models');
     Route::get('/kontakt', [FrontendController::class, 'contactPage'])->name('contact');
     Route::get('/prihlasenie', [FrontendController::class, 'loginPage'])->name('login')->middleware('guest');

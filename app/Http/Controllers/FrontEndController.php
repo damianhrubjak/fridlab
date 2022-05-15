@@ -31,4 +31,10 @@ class FrontEndController extends Controller
     {
         return view('pages.login');
     }
+
+    public function showBlog(Blog $blog)
+    {
+        $blog->load('image');
+        return view('pages.show-blog', compact('blog'));
+    }
 }

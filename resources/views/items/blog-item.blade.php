@@ -7,7 +7,7 @@
         <h2 class="font-heading text-pallette-yellow mt-4 mb-8 text-xl">{{ $blog->title }}</h2>
         <div class="prose text-white">{{ addThreeDots(strip_tags(html_entity_decode($blog->text)), 180) }}</div>
         <div class="mt-8">
-            <a href="#" class="ghost-button mr-0 ml-auto w-max">
+            <a href="{{ route('fe-pages.blogShowPage', $blog->slug) }}" class="ghost-button mr-0 ml-auto w-max">
                 <div class="content">Čítaj viac</div>
                 <div class="arrow">></div>
             </a>
