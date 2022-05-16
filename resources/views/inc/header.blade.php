@@ -10,7 +10,7 @@
                     href="{{ route('fe-pages.home') }}">Domov</a>
                 <a class="header-link {{ request()->routeIs('fe-pages.blogy') || request()->routeIs('fe-pages.blogShowPage') ? 'active' : '' }} block"
                     href="{{ route('fe-pages.blogy') }}">Blog</a>
-                <a class="header-link {{ request()->routeIs('fe-pages.3d-models') ? 'active' : '' }} block"
+                <a class="header-link {{ request()->routeIs('fe-pages.3d-models') || request()->routeIs('fe-pages.modelShowPage') ? 'active' : '' }} block"
                     href="{{ route('fe-pages.3d-models') }}">3D Modely</a>
                 <a class="header-link {{ request()->routeIs('fe-pages.contact') ? 'active' : '' }} block"
                     href="{{ route('fe-pages.contact') }}">Kontakt</a>

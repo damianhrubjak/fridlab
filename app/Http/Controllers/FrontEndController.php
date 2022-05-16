@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\PrintModel;
+
 
 class FrontEndController extends Controller
 {
@@ -19,11 +21,13 @@ class FrontEndController extends Controller
 
     public function modelsPage()
     {
-        return view('pages.models');
+        $models = PrintModel::with('files')->latest()->get();
+        return view('pages.models', compact('models'));
     }
 
     public function contactPage()
     {
+
         return view('pages.contact');
     }
 
@@ -36,5 +40,12 @@ class FrontEndController extends Controller
     {
         $blog->load('image');
         return view('pages.show-blog', compact('blog'));
+    }
+
+    public function showModel(PrintModel $printModel)
+    {
+        $printModel->load('files');
+        $fileGroups = $printModel->files->groupBy('pivot.type');
+        return view('pages.show-model', compact('printModel', 'fileGroups'));
     }
 }
