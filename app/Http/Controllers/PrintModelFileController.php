@@ -99,8 +99,11 @@ class PrintModelFileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PrintModel $printModel, $id)
+    public function destroy(PrintModel $printModel, File $file)
     {
-        //
+        $printModel->files()->detach($file->id);
+        FileService::deleteFile($file);
+        // Send successful response
+        return redirect()->back()->with('success_delete_image', 'úspešne vytvorený');
     }
 }

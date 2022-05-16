@@ -129,7 +129,17 @@ class FileService
      */
     public static function deleteFile(File $file)
     {
-        //
+        $folder = dirname(Storage::path($file->source_path));
+
+        $files = glob($folder . "/*"); // get all file names
+        foreach ($files as $fileInDir) { // iterate files
+            if (is_file($fileInDir)) {
+                unlink($fileInDir); // delete file
+            }
+        }
+        rmdir($folder);
+
+        $file->delete();
     }
 
     private static function getDataFromFileName($fileNameWithFolderPath)
