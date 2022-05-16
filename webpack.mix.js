@@ -16,6 +16,7 @@ mix.js("resources/js/app.js", "public/js")
     .react()
     .js("resources/js/splide.js", "public/js")
     .js("resources/js/map.js", "public/js")
+    .js("resources/js/lax.js", "public/js")
     .postCss("resources/postcss/app.pcss", "public/css")
     // ADMIN
     .js("resources/js/admin/admin.js", "public/js/")
