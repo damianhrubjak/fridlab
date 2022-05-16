@@ -20,14 +20,14 @@
                                     alt="{{ $printModel->title }}">
                             </div>
                             <div class="w-1/2">
-                                <div class="flex w-full gap-4">
+                                <div class="grid w-full grid-cols-3 gap-4">
                                     @foreach ($fileGroups['image'] as $image)
-                                        <img class="w-1/3"
+                                        <img class="h-full w-full"
                                             src="{{ route('file-thumbnail-serve', $image->slug) }}"
                                             alt="{{ $printModel->title }}">
                                     @endforeach
                                 </div>
-                                <div class="mt-4 flex w-full gap-4">
+                                <div class="mt-4 flex w-full flex-wrap gap-4">
                                     @foreach ($fileGroups['file'] as $file)
                                         <a href="{{ route('file-download', $file->slug) }}" download
                                             class="border-pallette-yellow hover:bg-pallette-yellow hover:text-pallette-black flex w-max items-center border-2 py-2 px-4 font-bold text-white transition duration-300">
