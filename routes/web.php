@@ -22,7 +22,7 @@ Route::group(['as' => 'fe-pages.'], function () {
     Route::get('/blogy', [FrontendController::class, 'blogPage'])->name('blogy');
     Route::get('/blogy/{blog:slug}', [FrontendController::class, 'showBlog'])->name('blogShowPage');
     Route::get('/3d-modely', [FrontendController::class, 'modelsPage'])->name('3d-models');
-    Route::get('/3d-modely/{printModel:slug}', [FrontendController::class, 'showModel'])->name('modelShowPage');
+    Route::get('/3d-modely/{printModel:slug}', [FrontendController::class, 'showModel'])->name('modelShowPage')->middleware('print-model-private');
     Route::get('/kontakt', [FrontendController::class, 'contactPage'])->name('contact');
     Route::get('/prihlasenie', [FrontendController::class, 'loginPage'])->name('login')->middleware('guest');
 });

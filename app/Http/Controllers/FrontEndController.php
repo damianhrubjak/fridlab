@@ -21,7 +21,7 @@ class FrontEndController extends Controller
 
     public function modelsPage()
     {
-        $models = PrintModel::with('files')->latest()->get();
+        $models = PrintModel::with('files')->where('is_private', '=', '0')->latest()->get();
         return view('pages.models', compact('models'));
     }
 
