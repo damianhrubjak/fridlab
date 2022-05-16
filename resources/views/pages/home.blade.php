@@ -7,9 +7,25 @@
     <section class="relative flex min-h-screen items-stretch pt-28 pb-10">
         <img class="side-shape left-0" src="{{ asset('images/homepage-illustration-cold-2.svg') }}" alt="">
 
-        <div class="page-wrapper flex items-center justify-center self-stretch">
+        <div class="page-wrapper flex items-center justify-center gap-16 self-stretch">
 
-            <div class="w-1/2"></div>
+            <div class="w-1/2">
+
+                <div class="relative flex h-full w-full items-end justify-center">
+
+                    <div class="lax-printer flex items-center justify-center">
+                        <img src="{{ asset('images/printer.png') }}" alt="">
+                        <div class="absolute -translate-x-6">
+                            <img class="lax-printer-head" src="{{ asset('images/head.png') }}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="absolute -translate-x-4 -translate-y-32">
+                        <img src="{{ asset('images/robot.png') }}" alt=""
+                            class="lax-robot w-28 overflow-hidden object-cover object-bottom">
+                    </div>
+                </div>
+            </div>
             <div class="relative flex w-1/2 items-center">
                 <div class="z-10 w-full">
                     <h1 class="font-heading heading-shadow w-3/4 text-7xl leading-snug">Hello, we are good</h1>
@@ -200,4 +216,5 @@
 
 @section('scripts')
     <script src="{{ request()->getSchemeAndHttpHost() . mix('js/splide.js') }}"></script>
+    <script src="{{ request()->getSchemeAndHttpHost() . mix('js/lax.js') }}"></script>
 @endsection
