@@ -19,5 +19,16 @@
                 MB
             </h3>
         </div>
+        <div class="flex w-full items-center justify-end gap-4">
+            <form
+                action="{{ route('admin-pages.print-model-files.destroy', ['printModel' => $printModel->slug, 'file' => $file->slug]) }}"
+                method="POST">
+                @csrf
+                @method('DELETE')
+
+                <button type="submit"
+                    class="bg-pallette-black flex items-center px-4 py-2 font-bold text-white transition duration-300 hover:bg-rose-700">Vymazať</button>
+            </form>
+        </div>
     </div>
 </div>
