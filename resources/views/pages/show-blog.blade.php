@@ -1,11 +1,14 @@
 @extends('layout.master')
 
-@section('page-title', 'Blog')
+@section('page-title', 'Blog - ' . $blog->title)
 
 @section('page-content')
 
     <div class="section-banner">
         <div class="page-wrapper">
+            <div class="mx-auto mb-8 flex items-center justify-between">
+                <h1 class="font-heading heading-shadow text-7xl font-bold text-white">{{ $blog->title }}</h1>
+            </div>
             <div class="w-full">
 
                 <div class="flex w-full justify-center">
