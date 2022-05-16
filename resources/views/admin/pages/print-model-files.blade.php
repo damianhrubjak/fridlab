@@ -12,6 +12,15 @@
         </div>
     </div>
 
+    @if (Session::get('success_change_main_image'))
+        <div class="mb-5 w-full bg-green-700 bg-opacity-50 py-2 px-5 text-2xl">
+            <div class="flex items-center justify-between">
+                <p class="font-bold text-white">Úspešne zmenený hlavný obrázok</p>
+                <i class="fa-solid fa-circle-check text-white"></i>
+            </div>
+        </div>
+    @endif
+
     <h2 class="mb-2 text-2xl font-bold text-slate-700 first:mt-0">Hlavný obrázok:</h2>
     <div class="grid w-full grid-cols-2 gap-8">
         @include('admin.items.image-item', ['file' => $fileGroups['main_image']->first()])
