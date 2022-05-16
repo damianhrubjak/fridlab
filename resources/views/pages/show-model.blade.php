@@ -22,7 +22,7 @@
                             <div class="w-1/2">
                                 <div class="grid w-full grid-cols-3 gap-4">
                                     @foreach ($fileGroups['image'] as $image)
-                                        <img class="h-full w-full"
+                                        <img class="h-full w-full object-cover"
                                             src="{{ route('file-thumbnail-serve', $image->slug) }}"
                                             alt="{{ $printModel->title }}">
                                     @endforeach
