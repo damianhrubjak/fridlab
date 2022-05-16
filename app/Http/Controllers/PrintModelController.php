@@ -113,7 +113,10 @@ class PrintModelController extends Controller
      */
     public function update(EditModelRequest $request, PrintModel $printModel)
     {
-        $printModel->update($request->all());
+        $data = $request->all();
+        $data['is_private'] = $request->has('is_private') ? true : false;
+
+        $printModel->update($data);
         return redirect()->back()->with('success', 'úspešne vytvorený');
     }
 

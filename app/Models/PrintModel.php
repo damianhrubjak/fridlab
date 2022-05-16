@@ -10,7 +10,11 @@ class PrintModel extends Model
 {
     use HasFactory, Sluggable;
 
-    protected $fillable = ['title', 'slug', 'text'];
+    protected $fillable = ['title', 'slug', 'text', 'is_private'];
+
+    protected $casts = [
+        'is_private' => 'boolean',
+    ];
 
     /**
      * Return the sluggable configuration array for this model.

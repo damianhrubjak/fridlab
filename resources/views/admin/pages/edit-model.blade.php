@@ -55,6 +55,13 @@
                         id="textarea-tinymce">{{ old('text', $printModel->text) }}</textarea>
                 </div>
 
+                <div class="my-5">
+                    <label for="is-private-input">
+                        <input type="checkbox" name="is_private" id="is-private-input" value="1"
+                            {{ old('is_private', $printModel->is_private) ? 'checked' : '' }}>
+                        Nastaviť ako súkromný
+                    </label>
+                </div>
 
                 <div class="text-center">
 
