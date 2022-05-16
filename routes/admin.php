@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\PrintModelController;
+use App\Http\Controllers\PrintModelFileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,8 @@ Route::group(['as' => 'admin-pages.', 'middleware' => ['auth'], 'prefix' => 'adm
     Route::get('/', [BackEndController::class, 'homePage'])->name('home');
 
     Route::resource('/blogy', BlogController::class)->parameters(['blogy' => 'blog:slug']);
+
+    Route::resource('/modely/{printModel:slug}/subory', PrintModelFileController::class, ['names' => 'print-model-files'])->parameters(['subory' => 'file:slug'])->except(['edit', 'show']);
 
     Route::resource('/modely', PrintModelController::class)->parameters(['modely' => 'printModel:slug']);
 

@@ -23,45 +23,74 @@
             </div>
         @endif
 
-        <div class="flex w-4/5 flex-col">
-            @if ($errors->any())
-                <div class="mb-8 bg-rose-800 p-4 font-bold text-white">
-                    <h2 class="font-heading">Chyby</h2>
+        <div class="flex w-full items-start gap-8">
 
-                    <ul class="mt-4 w-full list-disc pl-4">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
+            <div class="ml-0 mr-auto flex w-4/5 flex-col">
+                @if ($errors->any())
+                    <div class="mb-8 bg-rose-800 p-4 font-bold text-white">
+                        <h2 class="font-heading">Chyby</h2>
+
+                        <ul class="mt-4 w-full list-disc pl-4">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form enctype="multipart/form-data" action="{{ route('admin-pages.modely.update', $printModel->slug) }}"
+                    method="POST">
+                    @csrf
+                    @method('PATCH')
+
+                    <input type="hidden" name="id" value="{{ $printModel->id }}">
+
+                    <div class="flex w-full flex-col">
+                        <label for="">Nadpis Modelu</label>
+                        <input name="title" value="{{ old('title', $printModel->title) }}"
+                            class="rounded-xl py-3 px-6 text-xl" type="text">
+                    </div>
+
+                    <div class="my-5 flex flex-col">
+                        <label for="">Váš text</label>
+                        <textarea name="text" class="h-96 py-3 px-6 text-xl"
+                            id="textarea-tinymce">{{ old('text', $printModel->text) }}</textarea>
+                    </div>
+
+
+                    <div class="text-center">
+
+                        <button
+                            class="bg-pallette-black mt-5 w-full max-w-[500px] py-3 px-5 text-2xl text-white">Poslať</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="w-1/5 rounded-xl bg-white p-4">
+                <form action="" method="POST">
+                    @csrf
+                    @method('PATCH')
+
+                    @php
+                        $mainImage = $printModel->files->where('pivot.type', 'main_image')->first();
+                    @endphp
+                    <div>
+                        <p>Hlavný obrázok</p>
+                        <img src="{{ route('file-thumbnail-serve', $mainImage->slug) }}"
+                            alt="{{ $mainImage->file_name }}">
+                    </div>
+
+                    <div class="">
+                        <p>Ďalšie obrázky</p>
+                        @foreach ($printModel->files->where('pivot.type', 'image') as $item)
+                            <img src="{{ route('file-thumbnail-serve', $item->slug) }}" alt="{{ $item->file_name }}">
                         @endforeach
-                    </ul>
-                </div>
-            @endif
-            <form enctype="multipart/form-data" action="{{ route('admin-pages.modely.update', $printModel->slug) }}"
-                method="POST">
-                @csrf
-                @method('PATCH')
+                    </div>
 
-                <input type="hidden" name="id" value="{{ $printModel->id }}">
+                </form>
+            </div>
 
-                <div class="flex w-full flex-col">
-                    <label for="">Nadpis Modelu</label>
-                    <input name="title" value="{{ old('title', $printModel->title) }}"
-                        class="rounded-xl py-3 px-6 text-xl" type="text">
-                </div>
-
-                <div class="my-5 flex flex-col">
-                    <label for="">Váš text</label>
-                    <textarea name="text" class="h-96 py-3 px-6 text-xl"
-                        id="textarea-tinymce">{{ old('text', $printModel->text) }}</textarea>
-                </div>
-
-
-                <div class="text-center">
-
-                    <button
-                        class="bg-pallette-black mt-5 w-full max-w-[500px] py-3 px-5 text-2xl text-white">Poslať</button>
-                </div>
-            </form>
         </div>
+
     </div>
 
 

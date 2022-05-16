@@ -88,24 +88,9 @@ class PrintModelController extends Controller
 
         $printModel->load('files');
 
-        $mainImage = null;
-        $images = [];
-        $downloadableFiles = [];
+        $files = $printModel->files->groupBy('pivot.type');
 
-        foreach ($printModel->files as $file) {
-            switch ($file->pivot->type) {
-                case 'image':
-                    $images[] = $file;
-                    break;
-                case 'file':
-                    $downloadableFiles[] = $file;
-                    break;
-                case 'main_image':
-                    $mainImage = $file;
-                    break;
-            }
-        }
-        return view('admin.pages.show-print-model', compact('printModel', 'printModels', 'mainImage', 'images', 'downloadableFiles'));
+        return view('admin.pages.show-print-model', compact('printModel', 'printModels', 'files'));
     }
 
     /**
