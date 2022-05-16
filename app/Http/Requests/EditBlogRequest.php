@@ -24,7 +24,8 @@ class EditBlogRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:191|min:3|unique:blogs,title',
+            'id' => 'required|integer',
+            'title' => 'required|max:191|min:3|unique:blogs,title,' . $this->id,
             'text' => 'required|min:3|max:16777215',
         ];
     }

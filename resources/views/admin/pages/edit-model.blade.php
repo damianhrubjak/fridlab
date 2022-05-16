@@ -13,7 +13,7 @@
         @if (Session::get('success'))
             <div class="mb-5 w-4/5 bg-green-700 bg-opacity-50 py-2 px-5 text-2xl">
                 <div class="flex items-center justify-between">
-                    <p class="font-bold text-white">Model bol úspešne pridaný!</p>
+                    <p class="font-bold text-white">Model bol úspešne upravený!</p>
                     <i class="fa-solid fa-circle-check text-white"></i>
                 </div>
                 <div class="flex items-center justify-center">
@@ -39,6 +39,9 @@
                 method="POST">
                 @csrf
                 @method('PATCH')
+
+                <input type="hidden" name="id" value="{{ $printModel->id }}">
+
                 <div class="flex w-full flex-col">
                     <label for="">Nadpis Modelu</label>
                     <input name="title" value="{{ old('title', $printModel->title) }}"

@@ -24,7 +24,8 @@ class EditModelRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:191|min:3|unique:print_models,title',
+            'id' => 'required|integer',
+            'title' => 'required|max:191|min:3|unique:print_models,title,' . $this->id,
             'text' => 'required|min:3|max:16777215'
         ];
     }
