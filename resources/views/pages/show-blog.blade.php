@@ -17,8 +17,11 @@
                             <img class="w-full" src="{{ route('file-serve', $blog->image->slug) }}"
                                 alt="{{ $blog->title }}">
                         </div>
-
-                        <div class="my-16">
+                        <div class="mt-2">
+                            <p class="text-right text-slate-300">Vytvorený dňa: {{ slovakDateLong($blog->created_at) }}
+                            </p>
+                        </div>
+                        <div class="mb-16 mt-8">
                             <h2 class="text-5xl font-bold text-white">{{ $blog->title }}</h2>
                         </div>
 
