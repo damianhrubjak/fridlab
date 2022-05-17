@@ -1,5 +1,5 @@
 <div class="flex w-full items-start bg-white">
-    <a class="h-full w-1/3">
+    <a class="h-full w-1/3" href="{{ route('file-serve', $file->slug) }}" data-fslightbox>
         <img src="{{ route('file-thumbnail-serve', $file->slug) }}" alt="" class="h-full object-cover">
     </a>
     <div class="w-2/3 p-4">

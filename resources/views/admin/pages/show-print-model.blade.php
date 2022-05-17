@@ -15,17 +15,21 @@
             <div class="bg-pallette-black p-8">
                 <div class="w-full">
                     <div class="flex w-full gap-8">
-                        <div class="w-1/2">
+                        <a class="w-1/2" href="{{ route('file-serve', $files['main_image']->first()->slug) }}"
+                            data-fslightbox>
                             <img class="w-full"
                                 src="{{ route('file-thumbnail-serve', $files['main_image']->first()->slug) }}"
                                 alt="{{ $printModel->title }}">
-                        </div>
+                        </a>
                         <div class="w-1/2">
                             <div class="grid w-full grid-cols-3 gap-2">
                                 @foreach ($files['image'] as $image)
-                                    <img class="h-full w-full object-cover"
-                                        src="{{ route('file-thumbnail-serve', $image->slug) }}"
-                                        alt="{{ $printModel->title }}">
+                                    <a href="{{ route('file-serve', $image->slug) }}" data-fslightbox
+                                        class="block w-full">
+                                        <img class="h-full w-full object-cover"
+                                            src="{{ route('file-thumbnail-serve', $image->slug) }}"
+                                            alt="{{ $printModel->title }}">
+                                    </a>
                                 @endforeach
                             </div>
                             <div class="mt-4 flex w-full flex-wrap gap-4">
