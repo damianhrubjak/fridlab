@@ -2,19 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
-use Illuminate\Http\Request;
+use App\Http\Requests\ContactFormRequest;
+use App\Mail\MailForAdmin;
+use App\Mail\MailForSender;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
     /**
-     * Store a newly created resource in storage.
+     * Send contact form data to sender email and to admin
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ContactFormRequest $request)
     {
-        //
+        Mail::to($request->email)->send(new MailForSender($request->all()));
+        Mail::to("admin@fridlab.fri.uniza.sk")->send(new MailForAdmin($request->all()));
+
+        return response()->json(null, 200);
     }
 }
