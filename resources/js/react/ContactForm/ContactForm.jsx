@@ -1,5 +1,6 @@
-import { has } from "lodash";
-import React from "react";
+import axios from "axios";
+import { has, isEmpty } from "lodash";
+import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import { useForm } from "react-hook-form";
 import InputError from "../components/InputError";
@@ -20,14 +21,71 @@ export default function ContactForm() {
         mode: "onBlur",
     });
 
-    const sendForm = (data) => {
-        console.log(data);
-    };
+    const [isLoading, setIsLoading] = useState(false);
+    const [responseError, setResponseError] = useState({});
 
-    console.log(errors);
+    const sendForm = async (data) => {
+        if (isLoading) {
+            return;
+        }
+
+        setIsLoading(true);
+
+        try {
+            await axios.post(`${location.origin}/api/contact-form`, data);
+
+            setResponseError({
+                class: "bg-emerald-700",
+                message: "Úspešne odoslaný formulár, e-mail príde čoskoro",
+            });
+        } catch (error) {
+            switch (error.response.status) {
+                case 422:
+                    setResponseError({
+                        class: "bg-rose-700",
+                        message:
+                            "Zle vyplnený formulár, skontrolujte zadané údaje",
+                    });
+                    break;
+                case 429:
+                    setResponseError({
+                        class: "bg-rose-700",
+                        message: "Príliš veľa pokusov, skúste to zajtra",
+                    });
+                    break;
+
+                default:
+                    setResponseError({
+                        class: "bg-rose-700",
+                        message: "Nastala chyba, skúste to neskôr",
+                    });
+                    break;
+            }
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     return (
         <React.Fragment>
+            <div
+                className={`overflow-hidden transition-all duration-300 ${
+                    !isEmpty(responseError)
+                        ? "max-h-24 opacity-100"
+                        : "max-h-0 opacity-0"
+                }`}
+            >
+                <div
+                    className={`mb-8 p-4 ${
+                        has(responseError, "class") ? responseError.class : ""
+                    }`}
+                >
+                    <p className="text-center text-xl font-bold">
+                        {has(responseError, "message") && responseError.message}
+                    </p>
+                </div>
+            </div>
+
             <form action="#" onSubmit={(e) => e.preventDefault()}>
                 <div className="input-control mb-4 w-[calc(50%-20px)]">
                     <label className="label-control" htmlFor="full-name-input">
@@ -92,7 +150,7 @@ export default function ContactForm() {
                             {...register("email", {
                                 required: errorMessages.required,
                                 maxLength: {
-                                    value: 70,
+                                    value: 100,
                                     message: errorMessages.maxLength,
                                 },
                                 minLength: {
@@ -134,7 +192,16 @@ export default function ContactForm() {
                         error={has(errors, "message") ? errors.message : {}}
                     />
                 </div>
-                <div className="mt-10 flex w-full justify-center">
+                <div className="mt-10 flex w-full justify-between">
+                    <div
+                        className={`flex items-center justify-center transition duration-300 ${
+                            isLoading ? "opacity-100" : "opacity-0"
+                        }`}
+                    >
+                        <p className="flex animate-spin items-center justify-center font-heading text-3xl text-white">
+                            <i className="fa-solid fa-spinner"></i>
+                        </p>
+                    </div>
                     <button
                         className="submit-button  w-1/2 text-center"
                         type="submit"
