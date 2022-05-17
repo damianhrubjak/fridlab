@@ -15,7 +15,7 @@
                 <span><i class="fa-solid fa-comment-dots"></i></span>
                 <span>Blog</span>
             </a>
-            <a class="nav-link-item {{ request()->routeIs('admin-pages.modely.*') ? 'admin-active' : '' }}"
+            <a class="nav-link-item {{ request()->routeIs('admin-pages.modely.*') || request()->routeIs('admin-pages.print-model-files.*') ? 'admin-active' : '' }}"
                 href="{{ route('admin-pages.modely.index') }}">
                 <span><i class="fa-solid fa-cubes"></i></span>
                 <span>3D modely</span>
