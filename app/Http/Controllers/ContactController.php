@@ -18,7 +18,7 @@ class ContactController extends Controller
     public function store(ContactFormRequest $request)
     {
         Mail::to($request->email)->send(new MailForSender($request->all()));
-        Mail::to("admin@fridlab.fri.uniza.sk")->send(new MailForAdmin($request->all()));
+        Mail::to(env('ADMIN_EMAIL'))->send(new MailForAdmin($request->all()));
 
         return response()->json(null, 200);
     }
