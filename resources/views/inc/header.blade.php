@@ -2,7 +2,10 @@
     <div class="page-wrapper relative py-4">
         <div class="flex items-center justify-between">
             <div class="logo w-40">
-                <img src="{{ asset('images/Logo/FriDLab-logo-transparent.svg') }}" class="h-full w-[200px]" alt="LOGO">
+                <a href="{{ route('fe-pages.home') }}"><img
+                        src="{{ asset('images/Logo/FriDLab-logo-transparent.svg') }}" class="h-full w-[200px]"
+                        alt="LOGO"></a>
+
             </div>
             <div class="flex gap-16">
 

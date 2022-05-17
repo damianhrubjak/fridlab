@@ -1,6 +1,9 @@
 <div class="w-full">
-    <div class="blog-img relative w-full transition duration-300">
-        <img src="{{ route('file-thumbnail-serve', $blog->image->slug) }}" alt="" class="h-64 w-full object-cover">
+    <div class="relative w-full overflow-hidden">
+        <a href="{{ route('fe-pages.blogShowPage', $blog->slug) }}" class="blog-img transition duration-300"><img
+                src="{{ route('file-thumbnail-serve', $blog->image->slug) }}" alt=""
+                class="h-64 w-full object-cover"></a>
+
     </div>
     <div class="bg-pallette-black relative w-full p-4">
         <p class="text-right text-base text-gray-400">{{ slovakDateLong($blog->created_at) }}</p>
