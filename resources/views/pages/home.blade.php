@@ -158,55 +158,16 @@
 
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <li class="splide__slide">
-                            <div class="splide__slide__container h-52">
-                                <img class="h-full"
-                                    src="{{ asset('images/sponsors/globallogic-logo-vector.png') }}">
-                            </div>
-                            <div class="mt-4 text-center text-lg font-bold">
-                                TOTOK JE GLOBAL GOGIC
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="splide__slide__container h-52">
-                                <img class="h-full" src="{{ asset('images/sponsors/kia.jpg') }}">
-                            </div>
-                            <div class="mt-4 text-center text-lg font-bold">
-                                TOTOK JE KIA
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="splide__slide__container h-52">
-                                <img class="h-full" src="{{ asset('images/sponsors/kia1.webp') }}">
-                            </div>
-                            <div class="mt-4 text-center text-lg font-bold">
-                                TOTOK JE ZASA KIA
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="splide__slide__container h-52">
-                                <img class="h-full" src="{{ asset('images/sponsors/stiahnuť (1).png') }}">
-                            </div>
-                            <div class="mt-4 text-center text-lg font-bold">
-                                TOTOK JE NEVIEM CO
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="splide__slide__container h-52">
-                                <img class="h-full" src="{{ asset('images/sponsors/stiahnuť.png') }}">
-                            </div>
-                            <div class="mt-4 text-center text-lg font-bold">
-                                TOTOK JE ZAS NEVIEM CO
-                            </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="splide__slide__container h-52">
-                                <img class="h-full" src="{{ asset('images/sponsors/tatra.webp') }}">
-                            </div>
-                            <div class="mt-4 text-center text-lg font-bold">
-                                TOTOK JE TATRA BANKA
-                            </div>
-                        </li>
+                        @foreach ($sponsors as $sponsor)
+                            <li class="splide__slide">
+                                <div class="splide__slide__container h-52">
+                                    <img class="h-full" src="{{ route('file-serve', $sponsor->image->slug) }}">
+                                </div>
+                                <div class="mt-4 text-center text-lg font-bold">
+                                    {{ $sponsor->name }}
+                                </div>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

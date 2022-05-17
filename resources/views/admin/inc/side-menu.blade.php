@@ -5,10 +5,10 @@
             <img class="w-full" src="{{ asset('images/Logo/FriDLab-logo-transparent.svg') }}" alt="LOGO">
         </div>
         <div class="mt-16">
-            <a class="nav-link-item {{ request()->routeIs('admin-pages.home') ? 'admin-active' : '' }}"
-                href="{{ route('admin-pages.home') }}">
-                <span><i class="fa-solid fa-house-chimney"></i></span>
-                <span>Domov</span>
+            <a class="nav-link-item {{ request()->routeIs('admin-pages.sponzori.*') ? 'admin-active' : '' }}"
+                href="{{ route('admin-pages.sponzori.index') }}">
+                <span><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                <span>Sponzori</span>
             </a>
             <a class="nav-link-item {{ request()->routeIs('admin-pages.blogy.*') ? 'admin-active' : '' }}"
                 href="{{ route('admin-pages.blogy.index') }}">

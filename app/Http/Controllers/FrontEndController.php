@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\PrintModel;
-
+use App\Models\Sponsor;
 
 class FrontEndController extends Controller
 {
     public function homePage()
     {
-        return view('pages.home');
+        $sponsors = Sponsor::with('image')->get();
+        return view('pages.home', compact('sponsors'));
     }
 
     public function blogPage()
