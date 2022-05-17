@@ -20,11 +20,6 @@
                 <span><i class="fa-solid fa-cubes"></i></span>
                 <span>3D modely</span>
             </a>
-            <a class="nav-link-item {{ request()->routeIs('admin-pages.kontakty.*') ? 'admin-active' : '' }}"
-                href="{{ route('admin-pages.kontakty.index') }}">
-                <span><i class="fa-solid fa-envelopes-bulk"></i></span>
-                <span>Kontakty</span>
-            </a>
         </div>
     </div>
 

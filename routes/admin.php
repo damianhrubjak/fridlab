@@ -29,7 +29,5 @@ Route::group(['as' => 'admin-pages.', 'middleware' => ['auth'], 'prefix' => 'adm
 
     Route::resource('/modely', PrintModelController::class)->parameters(['modely' => 'printModel:slug']);
 
-    Route::resource('/kontakty', ContactController::class)->parameters(['kontakty' => 'contact'])->only(['index', 'show', 'destroy']);
-
     Route::post('/upload-image', [FileController::class, 'store'])->name('file-store');
 });
