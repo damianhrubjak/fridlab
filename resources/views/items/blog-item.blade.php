@@ -1,10 +1,8 @@
 <div class="w-full">
-    <div class="relative w-full overflow-hidden">
-        <a href="{{ route('fe-pages.blogShowPage', $blog->slug) }}" class="blog-img transition duration-300"><img
-                src="{{ route('file-thumbnail-serve', $blog->image->slug) }}" alt=""
-                class="h-64 w-full object-cover"></a>
+    <a href="{{ route('fe-pages.blogShowPage', $blog->slug) }}" class="img-hover-shades w-full">
+        <img src="{{ route('file-thumbnail-serve', $blog->image->slug) }}" alt="{{ $blog->title }}"
+            class="h-64 w-full object-cover"></a>
 
-    </div>
     <div class="bg-pallette-black relative w-full p-4">
         <p class="text-right text-base text-gray-400">{{ slovakDateLong($blog->created_at) }}</p>
         <h2 class="font-heading text-pallette-yellow mt-4 mb-8 text-xl">{{ $blog->title }}</h2>

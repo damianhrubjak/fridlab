@@ -59,16 +59,16 @@
     background: var(--pallette-yellow);
 }
 
-.blog-img {
-    @apply overflow-hidden transition duration-300;
+.img-hover-shades {
+    @apply relative block overflow-hidden transition duration-300;
 
     &:after {
         content: "";
-        @apply absolute bottom-0 left-0 h-[200%] w-[200%] scale-0 bg-pallette-yellow opacity-20 transition-all duration-500;
+        @apply absolute bottom-0 left-0 h-full w-full origin-bottom-left scale-0 bg-pallette-yellow opacity-20 transition duration-500;
     }
     &:before {
         content: "";
-        @apply absolute top-0 right-0 h-[200%] w-[200%] scale-0 bg-pallette-yellow opacity-20 transition-all duration-500;
+        @apply absolute top-0 right-0 h-full w-full origin-top-right scale-0 bg-pallette-yellow opacity-20 transition duration-500;
     }
 
     &:hover::after,
