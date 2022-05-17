@@ -35,7 +35,8 @@
                     class="header-social-links fa-brands fa-youtube hover:text-[#FF0000]"></i></a>
             <a href="https://discord.com/invite/vfy4KDaMXY"><i
                     class="header-social-links fa-brands fa-discord hover:text-[#7289DA]"></i></a>
-            <a href="#"><i class="header-social-links fa-solid fa-envelope gmail"></i></a>
+            <a href="mailto:{{ env('ADMIN_EMAIL') }}"><i
+                    class="header-social-links fa-solid fa-envelope gmail"></i></a>
         </div>
 
     </div>

@@ -39,10 +39,10 @@
                     </p>
 
                     <div class="mt-16">
-                        <button class="cta-button">
-                            <div class="content">Naše projekty</div>
+                        <a class="cta-button w-max" href="{{ route('fe-pages.3d-models') }}">
+                            <div class="content">3D modely</div>
                             <div class="arrow">></div>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -101,28 +101,33 @@
             @php
                 $milestones = [
                     [
-                        'image' => asset('images/milestones/milestone-1.jpg'),
-                        'heading' => 'Vypratanie priestorov',
+                        'image' => asset('images/milestones/2014-prva-tlaciaren.jpg'),
+                        'heading' => '2014 - Prvá tlačiareň',
                         'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
                     ],
                     [
-                        'image' => asset('images/milestones/milestone-2.jpg'),
-                        'heading' => 'Upravenie priestorov',
+                        'image' => asset('images/milestones/2018-hang-printer.jpg'),
+                        'heading' => '2018 - Hangprinter',
                         'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
                     ],
                     [
-                        'image' => asset('images/milestones/milestone-3.jpg'),
-                        'heading' => 'Malovanie',
+                        'image' => asset('images/milestones/2019-3dtlac-workshopy.jpg'),
+                        'heading' => '2019 - Predmet 3D tlač',
                         'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
                     ],
                     [
-                        'image' => asset('images/milestones/milestone-4.jpg'),
-                        'heading' => 'Priprava tlaciarni',
+                        'image' => asset('images/milestones/2020-stity.jpg'),
+                        'heading' => '2020 - FRI štíty',
                         'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
                     ],
                     [
-                        'image' => asset('images/milestones/milestone-5.jpg'),
-                        'heading' => 'Tlacenie',
+                        'image' => asset('images/milestones/2021-fridlab.png'),
+                        'heading' => '2021 - FriDLab',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                    ],
+                    [
+                        'image' => asset('images/milestones/2022-globallogic.png'),
+                        'heading' => '2022 - GlobalLogic',
                         'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
                     ],
                 ];

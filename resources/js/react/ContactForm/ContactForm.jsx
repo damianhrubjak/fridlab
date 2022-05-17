@@ -17,6 +17,7 @@ export default function ContactForm() {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm({
         mode: "onBlur",
     });
@@ -38,6 +39,8 @@ export default function ContactForm() {
                 class: "bg-emerald-700",
                 message: "Úspešne odoslaný formulár, e-mail príde čoskoro",
             });
+
+            reset();
         } catch (error) {
             switch (error.response.status) {
                 case 422:

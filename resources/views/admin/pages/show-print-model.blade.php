@@ -35,7 +35,7 @@
                                         <span class="mr-4 text-xl">
                                             <i class="fa-solid fa-download"></i>
                                         </span>
-                                        Stianuť: {{ $file->file_name }}
+                                        Stiahnuť: {{ $file->file_name }}
                                     </a>
                                 @endforeach
                             </div>
