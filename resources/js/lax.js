@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
         scrollY: {
             "max-height": [
                 ["index", 300],
-                [0, 119],
+                [0, 154],
                 {
                     cssUnit: "px",
                     cssFn: (val) => `${val}px`,

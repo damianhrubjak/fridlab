@@ -20,9 +20,9 @@
                         </div>
                     </div>
 
-                    <div class="absolute -translate-x-4 -translate-y-32">
+                    <div class="absolute -translate-y-32">
                         <img src="{{ asset('images/robot.png') }}" alt=""
-                            class="lax-robot w-28 overflow-hidden object-cover object-bottom">
+                            class="lax-robot w-36 overflow-hidden object-cover object-bottom">
                     </div>
                 </div>
             </div>
