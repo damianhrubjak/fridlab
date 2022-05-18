@@ -18,8 +18,21 @@
                 <a class="header-link {{ request()->routeIs('fe-pages.contact') ? 'active' : '' }} block"
                     href="{{ route('fe-pages.contact') }}">Kontakt</a>
 
+                <div class="burgir">
+
+                    <div
+                        class="middleBurgir bg-pallette-yellow relative h-[6px] w-[40px] transition-all duration-500 ease-in-out">
+                        <div
+                            class="topBurgir bg-pallette-yellow absolute top-0 left-0 h-[6px] w-[40px] translate-y-[-13px] transition-all duration-500 ease-in-out">
+                        </div>
+                        <div
+                            class="bottomBurgir bg-pallette-yellow absolute top-0 left-0 h-[6px] w-[40px] translate-y-[13px] transition-all duration-500 ease-in-out">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
 
         <div id="menu-social-links"
             class="bg-pallette-black social-links-wrapper absolute bottom-0 right-0 z-10 -mb-[29px] rounded-b px-3 py-1">
