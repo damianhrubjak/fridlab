@@ -34,12 +34,14 @@
         @include('admin.items.image-item', ['file' => $fileGroups['main_image']->first()])
     </div>
 
-    <h2 class="mb-2 mt-8 text-2xl font-bold text-slate-700 first:mt-0">Ďalšie obrázky:</h2>
-    <div class="grid w-full grid-cols-2 gap-8">
-        @foreach ($fileGroups['image'] as $image)
-            @include('admin.items.image-item', ['file' => $image])
-        @endforeach
-    </div>
+    @if ($fileGroups->has('image'))
+        <h2 class="mb-2 mt-8 text-2xl font-bold text-slate-700 first:mt-0">Ďalšie obrázky:</h2>
+        <div class="grid w-full grid-cols-2 gap-8">
+            @foreach ($fileGroups['image'] as $image)
+                @include('admin.items.image-item', ['file' => $image])
+            @endforeach
+        </div>
+    @endif
 
     <h2 class="mb-2 mt-8 text-2xl font-bold text-slate-700 first:mt-0">Súbory:</h2>
     <div class="grid w-full grid-cols-2 gap-8">
