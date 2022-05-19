@@ -87,15 +87,15 @@
             src="{{ asset('images/pixel-art/dino-lose.png') }}" alt="">
 
         {{-- PAC-MAN --}}
-        <img class="absolute right-20 top-1/4 w-48 rotate-12 -scale-x-[1] opacity-40 lg:w-64"
+        <img class="absolute right-20 top-1/4 hidden w-48 rotate-12 -scale-x-[1] opacity-40 sm:block lg:w-64"
             src="{{ asset('images/pixel-art/pacman.png') }}" alt="">
 
         {{-- MARIO --}}
-        <img class="absolute top-1/2 left-16 w-56 opacity-40 lg:w-80" src="{{ asset('images/pixel-art/mario.png') }}"
-            alt="MARIO">
+        <img class="absolute top-1/2 left-16 hidden w-56 opacity-40 sm:block lg:w-80"
+            src="{{ asset('images/pixel-art/mario.png') }}" alt="MARIO">
 
         {{-- GHOST --}}
-        <img class="absolute right-32 top-3/4 w-48 scale-x-[-1] opacity-40 lg:w-64"
+        <img class="absolute right-32 top-3/4 hidden w-48 scale-x-[-1] opacity-40 sm:block lg:w-64"
             src="{{ asset('images/pixel-art/ghost.png') }}" alt="">
 
         {{-- CACTUS --}}
