@@ -150,7 +150,7 @@
     </section>
 
     {{-- SPONSORS --}}
-    <section class="page-section bg-[#46a5db]">
+    <section class="page-section bg-[#a0afcc]">
         <div class="page-wrapper">
             <h2 class="font-heading heading-shadow xs:text-5xl mb-16 break-words text-4xl text-white">Sponzori</h2>
 
@@ -163,7 +163,7 @@
                                     <img class="h-full w-full object-contain"
                                         src="{{ route('file-serve', $sponsor->image->slug) }}">
                                 </div>
-                                <div class="text-pallette-dark-blue mt-4 text-center text-lg font-bold">
+                                <div class="heading-yellow mt-4 text-center text-xl text-white">
                                     {{ $sponsor->name }}
                                 </div>
                             </li>
