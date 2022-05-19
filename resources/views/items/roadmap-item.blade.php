@@ -1,14 +1,16 @@
- <div class="relative z-10 flex even:flex-row-reverse">
-     <div class="w-1/2 pb-24">
-         <img src="{{ $milestone['image'] }}" alt="" class="pixel-border h-full w-full object-cover object-bottom">
+ <div
+     class="group xs:pb-16 relative z-10 flex shrink-0 flex-col-reverse justify-center pb-8 last:pb-0 md:flex-row md:pb-0 md:even:flex-row-reverse">
+     <div class="roadmap-item-content-wrapper">
+         <img src="{{ $milestone['image'] }}" alt=""
+             class="pixel-border max-w-screen-xs mx-auto h-full w-full object-cover md:max-w-none">
      </div>
      <div class="roadmap-line">
-         <img src="{{ asset('images/coin.svg') }}" alt="" class="bg-pallette-black absolute left-0 top-0 w-full">
+         <img src="{{ asset('images/coin.svg') }}" alt="" class="bg-pallette-black xs:w-14 absolute top-0 w-10">
      </div>
-     <div class="flex w-1/2 items-center pb-24">
-         <div class="">
+     <div class="roadmap-item-content-wrapper">
+         <div class="w-full">
              <h2
-                 class="text-pallette-yellow font-heading border-pallette-yellow w-max max-w-full border-2 bg-[#f5ed10] bg-opacity-10 px-4 py-2 text-2xl">
+                 class="text-pallette-yellow font-heading border-pallette-yellow w-max max-w-full break-words border-2 bg-[#f5ed10] bg-opacity-10 px-4 py-2 text-xl lg:text-2xl">
                  {{ $milestone['heading'] }}
              </h2>
              <p class="mt-8">{!! $milestone['text'] !!}</p>

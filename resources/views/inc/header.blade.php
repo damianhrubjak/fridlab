@@ -1,34 +1,38 @@
 <header class="header-filled fixed top-0 left-0 z-[450] w-full shadow-md transition duration-500" id="app-header">
     <div class="page-wrapper relative py-4">
-        <div class="flex items-center justify-between">
-            <div class="logo w-40">
+        <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
+            <div class="logo w-32 md:w-40">
                 <a href="{{ route('fe-pages.home') }}"><img
                         src="{{ asset('images/Logo/FriDLab-logo-transparent.svg') }}" class="h-full w-[200px]"
                         alt="LOGO"></a>
 
             </div>
-            <div class="flex gap-16">
-
-                <a class="header-link {{ request()->routeIs('fe-pages.home') ? 'active' : '' }} block"
-                    href="{{ route('fe-pages.home') }}">Domov</a>
-                <a class="header-link {{ request()->routeIs('fe-pages.blogy') || request()->routeIs('fe-pages.blogShowPage') ? 'active' : '' }} block"
-                    href="{{ route('fe-pages.blogy') }}">Blog</a>
-                <a class="header-link {{ request()->routeIs('fe-pages.3d-models') || request()->routeIs('fe-pages.modelShowPage') ? 'active' : '' }} block"
-                    href="{{ route('fe-pages.3d-models') }}">3D Modely</a>
-                <a class="header-link {{ request()->routeIs('fe-pages.contact') ? 'active' : '' }} block"
-                    href="{{ route('fe-pages.contact') }}">Kontakt</a>
-
-                <div class="burgir">
-
+            <div id="hamburger"
+                class="flex h-10 w-10 cursor-pointer items-center md:pointer-events-none md:invisible md:hidden">
+                <div
+                    class="middle-hamburger bg-pallette-yellow pointer-events-none relative h-1 w-[40px] transition-all duration-500 ease-in-out">
                     <div
-                        class="middleBurgir bg-pallette-yellow relative h-[6px] w-[40px] transition-all duration-500 ease-in-out">
-                        <div
-                            class="topBurgir bg-pallette-yellow absolute top-0 left-0 h-[6px] w-[40px] translate-y-[-13px] transition-all duration-500 ease-in-out">
-                        </div>
-                        <div
-                            class="bottomBurgir bg-pallette-yellow absolute top-0 left-0 h-[6px] w-[40px] translate-y-[13px] transition-all duration-500 ease-in-out">
-                        </div>
+                        class="top-hamburger bg-pallette-yellow pointer-events-none absolute top-0 left-0 h-1 w-[40px] translate-y-[-13px] transition-all duration-500 ease-in-out">
                     </div>
+                    <div
+                        class="bottom-hamburger bg-pallette-yellow pointer-events-none absolute top-0 left-0 h-1 w-[40px] translate-y-[13px] transition-all duration-500 ease-in-out">
+                    </div>
+                </div>
+            </div>
+            <div class="max-h-0 w-full overflow-hidden opacity-0 transition-all duration-300 md:max-h-full md:w-auto md:opacity-100"
+                id="menu-links-wrapper">
+                <div class="flex w-full flex-col items-end gap-4 pb-2 pt-8 md:mt-0 md:flex-row md:items-center md:gap-16 md:pt-0 md:pb-0"
+                    id="menu-links-get-height">
+
+                    <a class="header-link {{ request()->routeIs('fe-pages.home') ? 'active' : '' }} block"
+                        href="{{ route('fe-pages.home') }}">Domov</a>
+                    <a class="header-link {{ request()->routeIs('fe-pages.blogy') || request()->routeIs('fe-pages.blogShowPage') ? 'active' : '' }} block"
+                        href="{{ route('fe-pages.blogy') }}">Blog</a>
+                    <a class="header-link {{ request()->routeIs('fe-pages.3d-models') || request()->routeIs('fe-pages.modelShowPage') ? 'active' : '' }} block"
+                        href="{{ route('fe-pages.3d-models') }}">3D Modely</a>
+                    <a class="header-link {{ request()->routeIs('fe-pages.contact') ? 'active' : '' }} block"
+                        href="{{ route('fe-pages.contact') }}">Kontakt</a>
+
                 </div>
             </div>
         </div>

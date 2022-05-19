@@ -1,6 +1,6 @@
 import lax from "lax.js";
 
-const moveVal = 100;
+const moveVal = window.screen.width < 475 ? 70 : 100;
 let fraction = 0,
     multiplier = 0,
     newValue = 0;
@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
         scrollY: {
             translateX: [
                 ["index", 300],
-                [0, moveVal * 6],
+                [0, moveVal * 7],
                 {
                     //? calculate value, to make head move forth and back
                     //* if val is from 0 to 80 -> head is moving to right

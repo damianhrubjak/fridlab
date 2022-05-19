@@ -6,4 +6,15 @@ new Splide(".splide", {
     padding: "2rem",
     autoWidth: true,
     gap: "2rem",
+    breakpoints: {
+        1280: {
+            perPage: 3,
+        },
+        1024: {
+            perPage: 2,
+        },
+        640: {
+            perPage: 1,
+        },
+    },
 }).mount();

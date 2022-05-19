@@ -3,7 +3,7 @@
         10px 10px 0 var(--pallette-blue);
 }
 .side-shape {
-    @apply absolute top-0 h-full object-cover opacity-50;
+    @apply absolute top-0 -z-10 h-full w-56 object-cover opacity-50 md:w-72 lg:w-96 xl:block xl:w-auto;
 }
 
 .pixel-border {
@@ -53,5 +53,8 @@
     background-position: center;
     background-size: 3px 24px;
     background-repeat: repeat-y;
-    @apply relative mx-24 flex w-14 items-start justify-center self-stretch;
+    @apply absolute right-0 top-0 flex h-full w-10 items-start justify-center self-stretch xs:w-14 md:relative md:h-auto md:px-20;
+}
+.roadmap-item-content-wrapper {
+    @apply flex w-[calc(100%-3.5rem)] items-center pb-12 group-last:pb-8 xs:w-[calc(100%-5rem)] md:w-[calc(50%-5rem)] md:pb-24;
 }

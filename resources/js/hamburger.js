@@ -1,8 +1,8 @@
-const burger = document.querySelector(".burgir");
+const burger = document.querySelector("#hamburger");
 
-const topBurger = document.querySelector(".topBurgir");
-const middleBurger = document.querySelector(".middleBurgir");
-const bottomBurger = document.querySelector(".bottomBurgir");
+const topBurger = document.querySelector(".top-hamburger");
+const middleBurger = document.querySelector(".middle-hamburger");
+const bottomBurger = document.querySelector(".bottom-hamburger");
 
 burger.addEventListener("click", function () {
     middleBurger.classList.toggle("middleDissapear");
