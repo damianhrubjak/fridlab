@@ -74,7 +74,7 @@ export default function ContactForm() {
             <div
                 className={`overflow-hidden transition-all duration-300 ${
                     !isEmpty(responseError)
-                        ? "max-h-24 opacity-100"
+                        ? "max-h-28 opacity-100 md:max-h-24"
                         : "max-h-0 opacity-0"
                 }`}
             >
@@ -90,7 +90,7 @@ export default function ContactForm() {
             </div>
 
             <form action="#" onSubmit={(e) => e.preventDefault()}>
-                <div className="input-control mb-4 w-[calc(50%-20px)]">
+                <div className="input-control mb-4 w-full md:w-[calc(50%-20px)]">
                     <label className="label-control" htmlFor="full-name-input">
                         Meno a priezvisko
                     </label>
@@ -114,8 +114,8 @@ export default function ContactForm() {
                         error={has(errors, "full_name") ? errors.full_name : {}}
                     />
                 </div>
-                <div className="mb-10 flex w-full gap-10">
-                    <div className="input-control w-1/2">
+                <div className="mb-4 flex w-full flex-col-reverse gap-4 md:mb-10 md:flex-row md:gap-10">
+                    <div className="input-control w-full md:w-1/2">
                         <label
                             className="label-control"
                             htmlFor="subject-input"
@@ -142,7 +142,7 @@ export default function ContactForm() {
                             error={has(errors, "subject") ? errors.subject : {}}
                         />
                     </div>
-                    <div className="input-control w-1/2">
+                    <div className="input-control w-full md:w-1/2">
                         <label className="label-control" htmlFor="email-input">
                             E-mail
                         </label>
@@ -195,9 +195,9 @@ export default function ContactForm() {
                         error={has(errors, "message") ? errors.message : {}}
                     />
                 </div>
-                <div className="mt-10 flex w-full justify-between">
+                <div className="mt-10 flex w-full flex-col-reverse justify-between xxs:flex-row">
                     <div
-                        className={`flex items-center justify-center transition duration-300 ${
+                        className={`mt-8 flex items-center justify-center transition duration-300 xxs:mt-0 ${
                             isLoading ? "opacity-100" : "opacity-0"
                         }`}
                     >
@@ -206,7 +206,7 @@ export default function ContactForm() {
                         </p>
                     </div>
                     <button
-                        className="submit-button  w-1/2 text-center"
+                        className="submit-button w-full text-center xxs:w-3/4 sm:w-1/2"
                         type="submit"
                         onClick={handleSubmit(sendForm)}
                     >

@@ -2,11 +2,11 @@
     @apply flex flex-col;
 
     & .label-control {
-        @apply mb-1 font-heading tracking-wider;
+        @apply mb-1 font-heading text-sm tracking-wider md:text-base;
     }
 
     & .input-content-control {
-        @apply border-2 border-pallette-yellow bg-[#f5ed10] bg-opacity-10 p-3 text-xl text-pallette-yellow outline-none transition duration-300;
+        @apply border-2 border-pallette-yellow bg-[#f5ed10] bg-opacity-10 p-2 text-xl text-pallette-yellow outline-none transition duration-300 md:p-3;
 
         &:focus {
             box-shadow: 0 0 5px 2px var(--pallette-yellow);

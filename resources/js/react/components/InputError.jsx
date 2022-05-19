@@ -6,7 +6,7 @@ function InputError({ error }) {
     return (
         <div
             className={`overflow-hidden transition-all duration-300 ${
-                has(error, "message") ? "max-h-20" : "max-h-0"
+                has(error, "message") ? "max-h-24 md:max-h-20" : "max-h-0"
             }`}
         >
             <div className="mt-4 flex items-center bg-rose-700 p-3">
