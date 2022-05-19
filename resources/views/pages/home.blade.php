@@ -139,18 +139,18 @@
         </div>
     </section>
 
-    <section class="page-section">
+    <section class="page-section bg-white">
         <div class="page-wrapper">
-            <h2 class="font-heading heading-shadow mb-16 text-5xl">Sponzori</h2>
+            <h2 class="font-heading heading-shadow mb-16 text-5xl text-transparent">Sponzori</h2>
 
             <div class="splide relative w-full" aria-label="Slide Container Example">
                 <div class="splide__arrows">
                     <button
-                        class="splide__arrow splide__arrow--prev heading-shadow font-heading absolute top-1/2 left-0 z-20 -ml-24 text-5xl">
+                        class="splide__arrow splide__arrow--prev heading-shadow font-heading absolute top-1/2 left-0 z-20 -ml-24 text-5xl text-transparent">
                         {{ '<' }}
                     </button>
                     <button
-                        class="splide__arrow splide__arrow--next heading-shadow font-heading absolute top-1/2 right-0 z-20 -mr-24 text-5xl">
+                        class="splide__arrow splide__arrow--next heading-shadow font-heading absolute top-1/2 right-0 z-20 -mr-24 text-5xl text-transparent">
                         {{ '>' }}
                     </button>
 
@@ -161,9 +161,9 @@
                         @foreach ($sponsors as $sponsor)
                             <li class="splide__slide">
                                 <div class="splide__slide__container h-52">
-                                    <img class="h-full" src="{{ route('file-serve', $sponsor->image->slug) }}">
+                                    <img class="h-full max-w-xs" src="{{ route('file-serve', $sponsor->image->slug) }}">
                                 </div>
-                                <div class="mt-4 text-center text-lg font-bold">
+                                <div class="text-pallette-dark-blue mt-4 text-center text-lg font-bold">
                                     {{ $sponsor->name }}
                                 </div>
                             </li>
