@@ -150,9 +150,9 @@
     </section>
 
     {{-- SPONSORS --}}
-    <section class="page-section bg-white">
+    <section class="page-section bg-[#46a5db]">
         <div class="page-wrapper">
-            <h2 class="font-heading heading-shadow xs:text-5xl mb-16 break-words text-4xl text-transparent">Sponzori</h2>
+            <h2 class="font-heading heading-shadow xs:text-5xl mb-16 break-words text-4xl text-white">Sponzori</h2>
 
             <div class="splide relative mx-auto w-full sm:w-[calc(100%-8rem)]" aria-label="Slide Container Example">
                 <div class="splide__track">
@@ -173,11 +173,11 @@
 
                 <div class="splide__arrows mt-6 flex w-full items-center justify-between">
                     <button
-                        class="splide__arrow splide__arrow--prev heading-shadow font-heading top-1/2 left-0 z-20 text-5xl text-transparent sm:absolute sm:-ml-16">
+                        class="splide__arrow splide__arrow--prev heading-shadow font-heading top-1/2 left-0 z-20 text-5xl text-white sm:absolute sm:-ml-16">
                         {{ '<' }}
                     </button>
                     <button
-                        class="splide__arrow splide__arrow--next heading-shadow font-heading top-1/2 right-0 z-20 text-5xl text-transparent sm:absolute sm:-mr-14">
+                        class="splide__arrow splide__arrow--next heading-shadow font-heading top-1/2 right-0 z-20 text-5xl text-white sm:absolute sm:-mr-14">
                         {{ '>' }}
                     </button>
 

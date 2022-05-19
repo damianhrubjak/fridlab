@@ -13,14 +13,14 @@
             <div class="flex w-full justify-center">
                 <div class="bg-pallette-black p-8">
                     <div class="w-full">
-                        <div class="flex w-full gap-8">
-                            <a class="w-1/2" data-fslightbox
+                        <div class="flex w-full flex-col gap-8 lg:flex-row">
+                            <a class="w-full lg:w-1/2" data-fslightbox
                                 href="{{ route('file-serve', $fileGroups['main_image']->first()->slug) }}">
                                 <img class="w-full"
                                     src="{{ route('file-thumbnail-serve', $fileGroups['main_image']->first()->slug) }}"
                                     alt="{{ $printModel->title }}">
                             </a>
-                            <div class="w-1/2">
+                            <div class="w-full lg:w-1/2">
                                 @if ($fileGroups->has('image'))
                                     <div class="grid w-full grid-cols-3 gap-4">
                                         @foreach ($fileGroups['image'] as $image)
