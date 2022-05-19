@@ -9,7 +9,7 @@
             class="page-wrapper flex flex-col items-center justify-center gap-16 pt-16 sm:py-10 lg:flex-row lg:py-20 xl:gap-24">
             <div class="w-full max-w-2xl lg:w-1/3 xl:w-2/5">
                 <h1 class="font-heading heading-shadow mb-16 break-words text-3xl leading-[1.3] sm:break-normal xl:text-5xl">
-                    Naše kontakty
+                    Kontakty
                 </h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam perferendis obcaecati quisquam est iusto
                     eligendi aliquam delectus fugiat ab consequuntur minus officia, facilis quibusdam optio dicta unde
