@@ -159,8 +159,8 @@
                     <ul class="splide__list">
                         @foreach ($sponsors as $sponsor)
                             <li class="splide__slide">
-                                <div class="splide__slide__container flex h-52 items-center justify-center">
-                                    <img class="xs:w-full h-full w-64 max-w-xs object-contain"
+                                <div class="splide__slide__container flex h-48 items-center justify-center">
+                                    <img class="h-full w-full object-contain"
                                         src="{{ route('file-serve', $sponsor->image->slug) }}">
                                 </div>
                                 <div class="text-pallette-dark-blue mt-4 text-center text-lg font-bold">
