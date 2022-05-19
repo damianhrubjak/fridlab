@@ -63,7 +63,9 @@ class PrintModelController extends Controller
         }
 
         // Store model to DB
-        $newPrintModel = PrintModel::create($request->all());
+        $printModelData = $request->all();
+        $printModelData['is_private'] = $request->has('is_private') ? true : false;
+        $newPrintModel = PrintModel::create($printModelData);
 
         // Attach files to M:N table
         $newPrintModel->files()->attach($mainImageId, ['type' => 'main_image']);

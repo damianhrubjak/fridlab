@@ -68,11 +68,17 @@
                     </label>
                 </div>
 
+                <div class="my-5">
+                    <label for="is-private-input">
+                        <input type="checkbox" name="is_private" id="is-private-input" value="1">
+                        Nastaviť ako súkromný
+                    </label>
+                </div>
+
                 <div class="my-5 flex flex-col">
                     <label for="">Váš text</label>
                     <textarea name="text" class="h-96 py-3 px-6 text-xl" id="textarea-tinymce">{{ old('text') }}</textarea>
                 </div>
-
 
                 <div class="text-center">
 

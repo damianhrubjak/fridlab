@@ -22,16 +22,18 @@
                                 alt="{{ $printModel->title }}">
                         </a>
                         <div class="w-1/2">
-                            <div class="grid w-full grid-cols-3 gap-2">
-                                @foreach ($files['image'] as $image)
-                                    <a href="{{ route('file-serve', $image->slug) }}" data-fslightbox
-                                        class="block w-full">
-                                        <img class="h-full w-full object-cover"
-                                            src="{{ route('file-thumbnail-serve', $image->slug) }}"
-                                            alt="{{ $printModel->title }}">
-                                    </a>
-                                @endforeach
-                            </div>
+                            @if ($files->has('image'))
+                                <div class="grid w-full grid-cols-3 gap-2">
+                                    @foreach ($files['image'] as $image)
+                                        <a href="{{ route('file-serve', $image->slug) }}" data-fslightbox
+                                            class="block w-full">
+                                            <img class="h-full w-full object-cover"
+                                                src="{{ route('file-thumbnail-serve', $image->slug) }}"
+                                                alt="{{ $printModel->title }}">
+                                        </a>
+                                    @endforeach
+                                </div>
+                            @endif
                             <div class="mt-4 flex w-full flex-wrap gap-4">
                                 @foreach ($files['file'] as $file)
                                     <a href="{{ route('file-download', $file->slug) }}" download
