@@ -98,6 +98,11 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        $blog->load('image');
+        FileService::deleteFile($blog->image);
+
+        $blog->delete();
+
+        return redirect()->route('admin-pages.blogy.index')->with('success_delete', 'úspešne vymazaný');
     }
 }
