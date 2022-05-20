@@ -10,8 +10,8 @@
             <form action="{{ route('admin-pages.sponzori.destroy', $sponsor->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button type="submit"><i
-                        class="fa-solid fa-trash hover:text-pallette-yellow text-3xl transition duration-300"></i></button>
+                <button type="submit" title="Vymazať"><i
+                        class="fa-solid fa-trash hover:text-pallette-black text-3xl text-gray-600 transition duration-300"></i></button>
             </form>
         </div>
     </div>
