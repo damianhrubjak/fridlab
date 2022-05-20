@@ -12,6 +12,18 @@
         </div>
     </div>
 
+    @if (Session::get('success_delete'))
+        <div class="page-wrapper">
+
+            <div class="mb-5 w-4/5 bg-green-700 bg-opacity-50 py-2 px-5 text-2xl">
+                <div class="flex items-center justify-between">
+                    <p class="font-bold text-white">3D Model bol úspešne vymazaný!</p>
+                    <i class="fa-solid fa-circle-check text-white"></i>
+                </div>
+            </div>
+        </div>
+    @endif
+
     <div class="grid grid-cols-5 gap-4">
 
         @foreach ($printModels as $printModel)

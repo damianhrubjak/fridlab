@@ -21,9 +21,15 @@
             <i class="fa-solid fa-folder text-3xl"></i>
             <p class="mt-2">Súbory</p>
         </a>
-        <a href="#" class="icon-link w-1/2 text-center text-white transition duration-300">
-            <i class="fa-solid fa-trash text-3xl"></i>
-            <p class="mt-2">Odstrániť</p>
-        </a>
+        <form action="{{ route('admin-pages.modely.destroy', $printModel->slug) }}" class="flex w-1/2 justify-center"
+            method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit"
+                class="icon-link flex w-1/2 flex-col items-center text-center text-white transition duration-300">
+                <i class="fa-solid fa-trash text-3xl"></i>
+                <p class="mt-2">Odstrániť</p>
+            </button>
+        </form>
     </div>
 </aside>

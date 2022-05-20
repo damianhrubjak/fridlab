@@ -130,6 +130,14 @@ class PrintModelController extends Controller
      */
     public function destroy(PrintModel $printModel)
     {
-        //
+        $printModel->load('files');
+
+        foreach ($printModel->files as $file) {
+            FileService::deleteFile($file);
+        }
+
+        $printModel->delete();
+
+        return redirect()->route('admin-pages.modely.index')->with('success_delete', 'úspešne vymazaný');
     }
 }
