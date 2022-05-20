@@ -30,18 +30,20 @@
             <div class="relative flex w-full max-w-2xl items-center xl:w-1/2">
                 <div class="z-10 w-full">
                     <h1 class="font-heading heading-shadow xxs:text-5xl w-full break-words text-4xl md:text-7xl lg:w-5/6"
-                        style="line-height: 1.25">Víta ťa FriDLab</h1>
+                        style="line-height: 1.25">{{ __('Víta ťa FriDLab') }}</h1>
 
                     <p class="mt-8 w-full text-justify text-xl font-medium md:mt-16 lg:w-3/4">
-                        Naše laboratórium 3D tlače funguje už niekoľko rokov a za ten čas sa nám podarilo dosiahnuť veľa
-                        úspechov. Pomáhali sme nemocniciam, kolegom, ale aj mnohým členom 3D komunity.
+                        {{ __("Naše laboratórium 3D tlače funguje už niekoľko rokov a za ten čas sa nám podarilo dosiahnuť veľa
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        úspechov. Pomáhali sme nemocniciam, kolegom, ale aj mnohým členom 3D komunity. V sučasnosti sa v
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        našom laboratóriu nachádza 18 3D tlačiarní vrátane zaujímavých prototypov.") }}
+
                         <br><br>
-                        <span class="uppercase">PRIDAJ SA K NÁM!</span>
+                        <span class="uppercase">{{ __('PRIDAJ SA K NÁM!') }}</span>
                     </p>
 
                     <div class="mt-8 md:mt-16">
                         <a class="cta-button w-max" href="{{ route('fe-pages.3d-models') }}">
-                            <div class="content">3D modely</div>
+                            <div class="content">{{ __('3D modely') }}</div>
                             <div class="arrow">></div>
                         </a>
                     </div>
@@ -57,11 +59,12 @@
     <section class="page-section">
         <div class="page-wrapper flex flex-col items-center justify-between lg:flex-row">
             <div class="w-full max-w-2xl lg:w-2/5">
-                <h2 class="font-heading heading-shadow xxs:text-5xl mb-8 break-words text-4xl sm:mb-16">Kto sme ?</h2>
+                <h2 class="font-heading heading-shadow xxs:text-5xl mb-8 break-words text-4xl sm:mb-16">
+                    {{ __('Kto sme ?') }}</h2>
                 <h3 class="mb-8 text-lg font-bold">
-                    {{ 'Sme nadšenci do 3D tlače a snažíme sa vytvoriť komunitu, ktorá sa bude navzájom podporovať vo využívaní tejto kreatívnej technológie a hlavne sa pri tom zabávať.' }}
+                    {{ __('Sme nadšenci do 3D tlače a snažíme sa vytvoriť komunitu, ktorá sa bude navzájom podporovať vo využívaní tejto kreatívnej technológie a hlavne sa pri tom zabávať.') }}
                 </h3>
-                <p>{{ 'Chceme napredovať a zdokonaľovať seba i svoje zručnosti, ponúknuť priestor kreativite a taktiež poukázať na všestrannosť využitia 3D tlače a zručností z nej vyplývajúcich.' }}
+                <p>{{ __('Chceme napredovať a zdokonaľovať seba i svoje zručnosti, ponúknuť priestor kreativite a taktiež poukázať na všestrannosť využitia 3D tlače a zručností z nej vyplývajúcich.') }}
                 </p>
             </div>
 
@@ -97,50 +100,51 @@
 
         <div class="page-wrapper">
 
-            <h2 class="font-heading heading-shadow xxs:text-5xl mb-16 text-center text-4xl md:mb-32 md:text-6xl">Naša cesta
+            <h2 class="font-heading heading-shadow xxs:text-5xl mb-16 text-center text-4xl md:mb-32 md:text-6xl">
+                {{ __('Naša cesta') }}
             </h2>
 
             @php
                 $milestones = [
                     [
                         'image' => asset('images/milestones/2014-prva-tlaciaren.jpg'),
-                        'heading' => '2014 - Prvá tlačiareň',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                        'heading' => '2014 - Prvá 3D tlačiareň',
+                        'text' => 'Prvou 3D tlačiarňou na Katedre technickej kybernetiky na Fakulte riadenia a informatiky bola Ultimaker 2, ktorá na tlač používa tlačové struny s priemerom 2.85mm. Postupom času sme ju prerobili a v súčasnosti dokáže tlačiť z filamentu so štandardným rozmerom 1.75mm.',
                     ],
                     [
                         'image' => asset('images/milestones/2016-inmoov.png'),
                         'heading' => '2016 - Raise3D N2 Plus',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                        'text' => 'Vďaka grantovým programom sa nám podarilo získať financie na rozšírenie vybavenia laboratória. Novým prírastkom sa stala 3D tlačiareň Raise3D N2 Plus, ktorá je výnimočná dvojitým extrúderom. Pomocou nej sa nám podarilo vytvoriť v rámci projektovej výučby humanoidného robota, ktorý sa volá InMoov.',
                     ],
                     [
                         'image' => asset('images/milestones/2017-prusa.png'),
                         'heading' => '2017 - Prvá Prusa',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                        'text' => 'Veľká pomoc fakulty nám umožnila rozvinúť naše vybavenie o svetoznámu značku tlačiarní Prusa model i3 MK3, ktoré sa radia medzi jedny z najlepších FDM/FFF 3D tlačiarní dodnes.',
                     ],
                     [
                         'image' => asset('images/milestones/2018-hang-printer.jpg'),
                         'heading' => '2018 - Hangprinter',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                        'text' => 'V tomto roku sa sformovala skupina 3D tlače na FRI pozostávajúca zo študentov a pedagógov. Zároveň vznikajú prvé bakalárske a diplomové práce s tématikou zameranou na 3D tlač. Jednou z týchto prác je 3D tlačiareň závesného typu - Hangprinter, ktorá je unikátna pohybovým systémom pomocou lán.',
                     ],
                     [
                         'image' => asset('images/milestones/2019-3dtlac-workshopy.jpg'),
                         'heading' => '2019 - Predmet 3D tlač',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                        'text' => 'Dostatočné množstvo nazbieraných skúseností a vybavenia nám umožnilo spustiť výberový predmet 3D tlač pre študentov všetkých študijných programov. Zorganizovali sme prvú Školu 3D tlače pre študentov stredných škôl. Táto akcia sa odvtedy uskutočnuje pravidelne.',
                     ],
                     [
                         'image' => asset('images/milestones/2020-stity.jpg'),
                         'heading' => '2020 - FRI štíty',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                        'text' => 'Keďže v tomto roku vypukla celosvetová pandémia koronavírusu, tak sme sa rozhodli zapojiť do boja proti nej. Vyrobili sme 3500 kusov ochranných FRI štítov, ktoré sme darovali nemocniciam. S príchodom vakcíny sme vyrobili 500 kusov FRI stojanov na vakcíny. Zároveň nás táto doba donútila spustiť online Školu 3D tlače.',
                     ],
                     [
                         'image' => asset('images/milestones/2021-fridlab.png'),
                         'heading' => '2021 - FriDLab',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                        'text' => 'Vďaka partii študentov a pedagógov s rovnakým nadšením pre 3D tlač sa vybudovalo nové laboratórium 3D tlače na FRI - FriDLab. Toto labolatórium môže ktokoľvek nájsť v miestnosti RB102.',
                     ],
                     [
                         'image' => asset('images/milestones/2022-globallogic.png'),
                         'heading' => '2022 - GlobalLogic',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                        'text' => 'Nadviazenie spolupráce so spoločnosťou GlobalLogic Slovakia nám umožnilo vylepšiť priestory FriDLabu a zároveň rozšíriť náš sortiment 3D tlačiarní.',
                     ],
                 ];
             @endphp
@@ -154,7 +158,8 @@
     {{-- SPONSORS --}}
     <section class="page-section bg-[#a0afcc]">
         <div class="page-wrapper">
-            <h2 class="font-heading heading-shadow xs:text-5xl mb-16 break-words text-4xl text-white">Sponzori</h2>
+            <h2 class="font-heading heading-shadow xs:text-5xl mb-16 break-words text-4xl text-white">
+                {{ __('Sponzori') }}</h2>
 
             <div class="splide relative mx-auto w-full sm:w-[calc(100%-8rem)]" aria-label="Slide Container Example">
                 <div class="splide__track">

@@ -9,11 +9,16 @@
             class="page-wrapper flex flex-col items-center justify-center gap-16 pt-16 sm:py-10 lg:flex-row lg:py-20 xl:gap-24">
             <div class="w-full max-w-2xl lg:w-1/3 xl:w-2/5">
                 <h1 class="font-heading heading-shadow mb-16 break-words text-3xl leading-[1.3] sm:break-normal xl:text-5xl">
-                    Kontakty
+                    {{ __('Kontakty') }}
                 </h1>
-                <p>V prípade akýchkoľvek otázok nás neváhajte kontaktovať. <br> Volajte, píšte, mailujte, alebo použite
-                    formulár nižšie. </p>
-                <p class="font-heading block w-max rotate-90 text-xl">{{ '>' }}</p>
+                <p>{{ __('V prípade akýchkoľvek otázok nás neváhajte kontaktovať.') }} <br>
+                    {{ __("Volajte, píšte, mailujte, alebo použite
+                                                                                                                        formulár nižšie.") }}
+                </p>
+                <div class="mt-5 flex w-full justify-center">
+
+                    <p class="font-heading text-pallette-yellow block w-max rotate-90 text-2xl">></p>
+                </div>
 
 
             </div>
@@ -26,7 +31,7 @@
                     </div>
                     <div class="xxs:w-[calc(100%-5rem)] w-full">
 
-                        <h3 class="font-heading text-pallette-yellow mb-2 text-lg tracking-wider">Adresa</h3>
+                        <h3 class="font-heading text-pallette-yellow mb-2 text-lg tracking-wider">{{ __('Adresa') }}</h3>
                         <p>Univerzitná 8215/1 <br> 010 26 Žilina</p>
                     </div>
                 </div>
@@ -40,7 +45,7 @@
                     </div>
                     <div class="xxs:w-[calc(100%-5rem)] w-full">
 
-                        <h3 class="font-heading text-pallette-yellow mb-2 text-lg tracking-wider">Telefón</h3>
+                        <h3 class="font-heading text-pallette-yellow mb-2 text-lg tracking-wider">{{ __('Telefón') }}</h3>
                         <a href="tel:+421 952 145 369"><span class="text-pallette-yellow">+</span>421 952 145 369</a>
                     </div>
                 </div>
@@ -62,9 +67,10 @@
                     </div>
                     <div class="xxs:w-[calc(100%-5rem)] w-full">
 
-                        <h3 class="font-heading text-pallette-yellow mb-2 text-lg tracking-wider">Dostupnosť</h3>
+                        <h3 class="font-heading text-pallette-yellow mb-2 text-lg tracking-wider">{{ __('Dostupnosť') }}
+                        </h3>
                         <p>
-                            Pondelok - Piatok<br>
+                            {{ __('Pondelok - Piatok') }}<br>
                             8:00 - 16:00
                         </p>
                     </div>
@@ -79,15 +85,14 @@
 
     <section class="page-section">
         <div class="page-wrapper mb-16 text-center">
-            <h2 class="font-heading heading-shadow text-3xl xl:text-5xl">Kde nás nájdete</h2>
+            <h2 class="font-heading heading-shadow text-3xl xl:text-5xl">{{ __('Kde nás nájdete') }}</h2>
         </div>
         <div class="h-72 w-full sm:h-96 xl:h-[650px]" id="map"></div>
     </section>
 
     <section class="page-section">
         <div class="page-wrapper text-center">
-            <h3 class="font-heading xs:text-3xl text-2xl">„Can't Do It In Real Life? Do It On 3d printer."</h3>
-            <p class="mt-5 text-right">2024, Matúš Baláži</p>
+            <h3 class="font-heading xs:text-3xl text-2xl">„Can't Do It In Real Life? Do It On 3d printer.“</h3>
         </div>
     </section>
 
