@@ -29,17 +29,14 @@
             </div>
             <div class="relative flex w-full max-w-2xl items-center xl:w-1/2">
                 <div class="z-10 w-full">
-                    <h1
-                        class="font-heading heading-shadow xxs:text-5xl w-full break-words text-4xl leading-snug md:text-7xl lg:w-3/4">
-                        Hello, we are
-                        good</h1>
+                    <h1 class="font-heading heading-shadow xxs:text-5xl w-full break-words text-4xl md:text-7xl lg:w-5/6"
+                        style="line-height: 1.25">Víta ťa FriDLab</h1>
 
-                    <p class="mt-8 w-full text-xl font-medium md:mt-16 lg:w-3/4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <p class="mt-8 w-full text-justify text-xl font-medium md:mt-16 lg:w-3/4">
+                        Naše laboratórium 3D tlače funguje už niekoľko rokov a za ten čas sa nám podarilo dosiahnuť veľa
+                        úspechov. Pomáhali sme nemocniciam, kolegom, ale aj mnohým členom 3D komunity.
                         <br><br>
-                        Optio ea praesentium laudantium temporibus,
-                        at adipisci porro iure dolore! Qui eos velit ipsa voluptatibus dolor aperiam quod eius et quas
-                        ipsum.
+                        <span class="uppercase">PRIDAJ SA K NÁM!</span>
                     </p>
 
                     <div class="mt-8 md:mt-16">
@@ -60,17 +57,12 @@
     <section class="page-section">
         <div class="page-wrapper flex flex-col items-center justify-between lg:flex-row">
             <div class="w-full max-w-2xl lg:w-2/5">
-                <h2 class="font-heading heading-shadow xxs:text-5xl mb-8 break-words text-4xl sm:mb-16">Kto sme?</h2>
-                <h3 class="mb-8 text-lg font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odio
-                    sint
-                    numquam animi reiciendis
-                    est
-                    corrupti facere.</h3>
-                <p>Sme partia ľudí, ktorá vo svojom voľnom čase organizuje rôzne podujatia pre študentov, absolventov,
-                    vyučujúcich a priateľov Fakulty riadenia a informatiky. Aj keď každý z nás šiel na FRI s inými záujmami
-                    a
-                    študijnými predpokladmi, v súčasnosti nás FRI Club spája. Radi zlepšujeme úroveň študentského života na
-                    UNIZA.</p>
+                <h2 class="font-heading heading-shadow xxs:text-5xl mb-8 break-words text-4xl sm:mb-16">Kto sme ?</h2>
+                <h3 class="mb-8 text-lg font-bold">
+                    {{ 'Sme nadšenci do 3D tlače a snažíme sa vytvoriť komunitu, ktorá sa bude navzájom podporovať vo využívaní tejto kreatívnej technológie a hlavne sa pri tom zabávať.' }}
+                </h3>
+                <p>{{ 'Chceme napredovať a zdokonaľovať seba i svoje zručnosti, ponúknuť priestor kreativite a taktiež poukázať na všestrannosť využitia 3D tlače a zručností z nej vyplývajúcich.' }}
+                </p>
             </div>
 
             <div class="mt-8 w-full max-w-2xl sm:mt-16 lg:mt-0 lg:w-3/5 lg:pl-20">
@@ -113,32 +105,42 @@
                     [
                         'image' => asset('images/milestones/2014-prva-tlaciaren.jpg'),
                         'heading' => '2014 - Prvá tlačiareň',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                    ],
+                    [
+                        'image' => asset('images/milestones/2016-inmoov.png'),
+                        'heading' => '2016 - Raise3D N2 Plus',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
+                    ],
+                    [
+                        'image' => asset('images/milestones/2017-prusa.png'),
+                        'heading' => '2017 - Prvá Prusa',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
                     ],
                     [
                         'image' => asset('images/milestones/2018-hang-printer.jpg'),
                         'heading' => '2018 - Hangprinter',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
                     ],
                     [
                         'image' => asset('images/milestones/2019-3dtlac-workshopy.jpg'),
                         'heading' => '2019 - Predmet 3D tlač',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
                     ],
                     [
                         'image' => asset('images/milestones/2020-stity.jpg'),
                         'heading' => '2020 - FRI štíty',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
                     ],
                     [
                         'image' => asset('images/milestones/2021-fridlab.png'),
                         'heading' => '2021 - FriDLab',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
                     ],
                     [
                         'image' => asset('images/milestones/2022-globallogic.png'),
                         'heading' => '2022 - GlobalLogic',
-                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sapiente molestiae totam maxime cupiditate, amet adipisci hic eum repudiandae, id accusantium laudantium obcaecati nisi excepturi consequatur animi vel natus quibusdam odio.',
+                        'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Officiis, quia a repellendus ad qui modi illo fugit dolore doloremque fugiat molestias unde beatae ipsam ipsa, harum quibusdam vero dicta. Esse?',
                     ],
                 ];
             @endphp

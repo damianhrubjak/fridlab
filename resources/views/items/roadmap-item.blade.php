@@ -13,7 +13,7 @@
                  class="text-pallette-yellow font-heading border-pallette-yellow w-max max-w-full break-words border-2 bg-[#f5ed10] bg-opacity-10 px-4 py-2 text-xl lg:text-2xl">
                  {{ $milestone['heading'] }}
              </h2>
-             <p class="mt-8">{!! $milestone['text'] !!}</p>
+             <p class="mt-8 text-2xl">{!! $milestone['text'] !!}</p>
          </div>
      </div>
  </div>

@@ -11,9 +11,11 @@
                 <h1 class="font-heading heading-shadow mb-16 break-words text-3xl leading-[1.3] sm:break-normal xl:text-5xl">
                     Kontakty
                 </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam perferendis obcaecati quisquam est iusto
-                    eligendi aliquam delectus fugiat ab consequuntur minus officia, facilis quibusdam optio dicta unde
-                    corporis perspiciatis.</p>
+                <p>V prípade akýchkoľvek otázok nás neváhajte kontaktovať. <br> Volajte, píšte, mailujte, alebo použite
+                    formulár nižšie. </p>
+                <p class="font-heading block w-max rotate-90 text-xl">{{ '>' }}</p>
+
+
             </div>
             <div class="grid w-full max-w-2xl gap-10 sm:grid-cols-2 lg:w-2/3 xl:w-3/5">
                 <div class="xxs:flex-row flex flex-col items-center justify-between gap-3">
@@ -25,7 +27,7 @@
                     <div class="xxs:w-[calc(100%-5rem)] w-full">
 
                         <h3 class="font-heading text-pallette-yellow mb-2 text-lg tracking-wider">Adresa</h3>
-                        <p>Žilina 8512, 012345</p>
+                        <p>Univerzitná 8215/1 <br> 010 26 Žilina</p>
                     </div>
                 </div>
 
@@ -62,8 +64,8 @@
 
                         <h3 class="font-heading text-pallette-yellow mb-2 text-lg tracking-wider">Dostupnosť</h3>
                         <p>
-                            Pondelok - Sobota <br>
-                            8:00 - 18:00
+                            Pondelok - Piatok<br>
+                            8:00 - 16:00
                         </p>
                     </div>
                 </div>
