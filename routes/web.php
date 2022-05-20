@@ -17,21 +17,16 @@ use App\Http\Controllers\FrontendController;
 |
 */
 
+Route::redirect('/', '/' . app()->getLocale());
+
 // FE pages
 Route::group([
-    'as' => 'fe-pages.', 'prefix' => '{language}',
-    'where' => ['locale' => '[a-zA-Z]{2}'],
+    'as' => 'fe-pages.',
+    'prefix' => '{language?}',
+    'where' => ['language' => '[a-zA-Z]{2}'],
     'middleware' => 'set-locale',
 ], function () {
     Route::get('/', [FrontendController::class, 'homePage'])->name('home');
-    /* Route::get('/{locale?}', function ($locale = null) {
-        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
-            app()->setLocale($locale);
-        }
-        $sponsors = Sponsor::with('image')->get();
-        return view('pages.home', compact('sponsors'));
-    })->name('home');*/
-
     Route::get('/blogy', [FrontendController::class, 'blogPage'])->name('blogy');
     Route::get('/blogy/{blog:slug}', [FrontendController::class, 'showBlog'])->name('blogShowPage');
     Route::get('/3d-modely', [FrontendController::class, 'modelsPage'])->name('3d-models');

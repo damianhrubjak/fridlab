@@ -2,7 +2,7 @@
     <div class="page-wrapper relative py-4">
         <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
             <div class="logo w-32 md:w-40">
-                <a href="{{ route('fe-pages.home') }}"><img
+                <a href="{{ route('fe-pages.home', ['language' => app()->getLocale()]) }}"><img
                         src="{{ asset('images/Logo/FriDLab-logo-transparent.svg') }}" class="h-full w-[200px]"
                         alt="LOGO"></a>
 
@@ -25,14 +25,24 @@
                     id="menu-links-get-height">
 
                     <a class="header-link {{ request()->routeIs('fe-pages.home') ? 'active' : '' }} block"
-                        href="{{ route('fe-pages.home') }}">{{ __('Domov') }}</a>
+                        href="{{ route('fe-pages.home', ['language' => app()->getLocale()]) }}">{{ __('Domov') }}</a>
                     <a class="header-link {{ request()->routeIs('fe-pages.blogy') || request()->routeIs('fe-pages.blogShowPage') ? 'active' : '' }} block"
-                        href="{{ route('fe-pages.blogy') }}">Blog</a>
+                        href="{{ route('fe-pages.blogy', ['language' => app()->getLocale()]) }}">Blog</a>
                     <a class="header-link {{ request()->routeIs('fe-pages.3d-models') || request()->routeIs('fe-pages.modelShowPage') ? 'active' : '' }} block"
-                        href="{{ route('fe-pages.3d-models') }}">{{ __('3D Modely') }}</a>
+                        href="{{ route('fe-pages.3d-models', ['language' => app()->getLocale()]) }}">{{ __('3D Modely') }}</a>
                     <a class="header-link {{ request()->routeIs('fe-pages.contact') ? 'active' : '' }} block"
-                        href="{{ route('fe-pages.contact') }}">{{ __('Kontakt') }}</a>
-
+                        href="{{ route('fe-pages.contact', ['language' => app()->getLocale()]) }}">{{ __('Kontakt') }}</a>
+                    <div class="flex gap-2">
+                        <a href="{{ route(request()->route()->getName(),array_replace(request()->route()->parameters, ['language' => 'sk'])) }}"
+                            class="bg-transparent px-1 transition duration-300">
+                            <img src="https://flagcdn.com/w20/sk.jpg" alt="Slovak Flag">
+                        </a>
+                        <div class="w-px self-stretch bg-white"></div>
+                        <a href="{{ route(request()->route()->getName(),array_replace(request()->route()->parameters, ['language' => 'en'])) }}"
+                            class="bg-transparent px-1 transition duration-300">
+                            <img src="https://flagcdn.com/w20/gb.jpg" alt="Slovak Flag">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
