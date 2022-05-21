@@ -25,13 +25,13 @@
                     id="menu-links-get-height">
 
                     <a class="header-link {{ request()->routeIs('fe-pages.home') ? 'active' : '' }} block"
-                        href="{{ route('fe-pages.home', ['language' => app()->getLocale()]) }}">{{ __('Domov') }}</a>
+                        href="{{ route('fe-pages.home', ['language' => app()->getLocale()]) }}">{{ __('Home') }}</a>
                     <a class="header-link {{ request()->routeIs('fe-pages.blogy') || request()->routeIs('fe-pages.blogShowPage') ? 'active' : '' }} block"
                         href="{{ route('fe-pages.blogy', ['language' => app()->getLocale()]) }}">Blog</a>
                     <a class="header-link {{ request()->routeIs('fe-pages.3d-models') || request()->routeIs('fe-pages.modelShowPage') ? 'active' : '' }} block"
-                        href="{{ route('fe-pages.3d-models', ['language' => app()->getLocale()]) }}">{{ __('3D Modely') }}</a>
+                        href="{{ route('fe-pages.3d-models', ['language' => app()->getLocale()]) }}">{{ __('3D Models') }}</a>
                     <a class="header-link {{ request()->routeIs('fe-pages.contact') ? 'active' : '' }} block"
-                        href="{{ route('fe-pages.contact', ['language' => app()->getLocale()]) }}">{{ __('Kontakt') }}</a>
+                        href="{{ route('fe-pages.contact', ['language' => app()->getLocale()]) }}">{{ __('Contact') }}</a>
                     <div class="flex gap-2">
                         <a href="{{ route(request()->route()->getName(),array_replace(request()->route()->parameters, ['language' => 'sk'])) }}"
                             class="bg-transparent px-1 transition duration-300">

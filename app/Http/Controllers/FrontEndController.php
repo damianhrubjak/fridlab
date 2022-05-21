@@ -37,13 +37,13 @@ class FrontEndController extends Controller
         return view('pages.login');
     }
 
-    public function showBlog(Blog $blog)
+    public function showBlog(string $lang, Blog $blog)
     {
         $blog->load('image');
         return view('pages.show-blog', compact('blog'));
     }
 
-    public function showModel(PrintModel $printModel)
+    public function showModel(string $lang, PrintModel $printModel)
     {
         $printModel->load('files');
         $fileGroups = $printModel->files->groupBy('pivot.type');
