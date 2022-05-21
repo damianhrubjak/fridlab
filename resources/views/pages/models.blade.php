@@ -6,7 +6,7 @@
 
     <section class="section-banner">
         <div class="page-wrapper">
-            <h1 class="font-heading heading-shadow xxs:text-5xl text-4xl md:text-6xl">{{ __('3D Modely') }}</h1>
+            <h1 class="font-heading heading-shadow xxs:text-5xl text-4xl md:text-6xl">{{ __('3D Models') }}</h1>
         </div>
     </section>
 

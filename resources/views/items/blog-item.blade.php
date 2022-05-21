@@ -1,7 +1,8 @@
 <div class="w-full max-w-2xl">
-    <a href="{{ route('fe-pages.blogShowPage', $blog->slug) }}" class="img-hover-shades w-full">
-        <img src="{{ route('file-thumbnail-serve', $blog->image->slug) }}" alt="{{ $blog->title }}"
-            class="h-64 w-full object-cover"></a>
+    <a href="{{ route('fe-pages.blogShowPage', [$blog->slug, 'language' => app()->getLocale()]) }}"
+        class="img-hover-shades w-full">
+        <img src="{{ route('file-thumbnail-serve', [$blog->image->slug, 'language' => app()->getLocale()]) }}"
+            alt="{{ $blog->title }}" class="h-64 w-full object-cover"></a>
 
     <div class="bg-pallette-black relative w-full p-4">
         <p class="xs:text-base text-right text-sm text-gray-400">{{ slovakDateLong($blog->created_at) }}</p>
@@ -10,8 +11,9 @@
         </h2>
         <div class="prose text-white">{{ addThreeDots(strip_tags(html_entity_decode($blog->text)), 180) }}</div>
         <div class="xs:mt-8 mt-4">
-            <a href="{{ route('fe-pages.blogShowPage', $blog->slug) }}" class="ghost-button mr-0 ml-auto w-max">
-                <div class="content">Čítaj viac</div>
+            <a href="{{ route('fe-pages.blogShowPage', ['blog' => $blog->slug, 'language' => app()->getLocale()]) }}"
+                class="ghost-button mr-0 ml-auto w-max">
+                <div class="content">{{ __('Read more') }}</div>
                 <div class="arrow">></div>
             </a>
         </div>

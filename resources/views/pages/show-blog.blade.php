@@ -18,7 +18,8 @@
                                 alt="{{ $blog->title }}">
                         </div>
                         <div class="mt-2">
-                            <p class="text-right text-slate-300">Vytvorený dňa: {{ slovakDateLong($blog->created_at) }}
+                            <p class="text-right text-slate-300">{{ __('Created at') }}:
+                                {{ slovakDateLong($blog->created_at) }}
                             </p>
                         </div>
                         <div class="mb-16 mt-8">

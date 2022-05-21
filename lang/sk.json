@@ -788,5 +788,8 @@
     "Entered value is too short": "Zadaná hodnota je pridlhá",
     "Entered value is too long": "Zadaná hodnota je prikrátka",
     "This field is required": "Toto pole je povinné",
-    "This field does not match requested format": "Toto pole nespĺňa daný formát"
+    "This field does not match requested format": "Toto pole nespĺňa daný formát",
+    "Read more": "Čítaj viac",
+    "Created at": "Vytvorený dňa",
+    "Open": "Otvoriť"
 }

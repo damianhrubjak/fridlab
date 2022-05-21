@@ -24,6 +24,7 @@ export default function ContactForm({ translations }) {
         },
         [translations]
     );
+
     const [isLoading, setIsLoading] = useState(false);
     const [responseError, setResponseError] = useState({});
 
