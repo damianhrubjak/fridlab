@@ -52,8 +52,7 @@
                         <h2 class="text-5xl font-bold text-white">{{ $printModel->title }}</h2>
                     </div>
 
-                    <div
-                        class="prose prose-white prose-img:p-6 prose-invert ml-auto mr-auto max-w-[1200px] break-all text-xl">
+                    <div class="prose prose-white prose-img:p-6 prose-invert ml-auto mr-auto max-w-[1200px] text-xl">
                         {!! html_entity_decode($printModel->text) !!}
                     </div>
                 </div>
