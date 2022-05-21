@@ -780,5 +780,13 @@
     "3D Models": "3D Modely",
     "Home": "Domov",
     "Contact": "Kontakt",
-    "Availability": "Dostupnosť"
+    "Availability": "Dostupnosť",
+    "Contact form was successfully submitted, you will receive e-mail soon": "Úspešne odoslaný formulár, e-mail príde čoskoro",
+    "Form is filled wrong, check entered values": "Zle vyplnený formulár, skontrolujte zadané údaje",
+    "Too many attempts, try again tomorrow": "Príliš veľa pokusov, skúste to zajtra",
+    "Error occurred, try again later": "Nastala chyba, skúste to neskôr",
+    "Entered value is too short": "Zadaná hodnota je pridlhá",
+    "Entered value is too long": "Zadaná hodnota je prikrátka",
+    "This field is required": "Toto pole je povinné",
+    "This field does not match requested format": "Toto pole nespĺňa daný formát"
 }

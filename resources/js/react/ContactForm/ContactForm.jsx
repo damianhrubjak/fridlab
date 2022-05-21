@@ -1,18 +1,11 @@
 import axios from "axios";
-import { has, isEmpty } from "lodash";
-import React, { useState } from "react";
+import { has, isEmpty, isUndefined } from "lodash";
+import React, { useState, useCallback } from "react";
 import { createRoot } from "react-dom/client";
 import { useForm } from "react-hook-form";
 import InputError from "../components/InputError";
 
-const errorMessages = {
-    maxLength: "Zadaná hodnota je pridlhá",
-    minLength: "Zadaná hodnota je prikrátka",
-    required: "Toto pole je povinné",
-    regex: "Toto pole nespĺňa daný formát",
-};
-
-export default function ContactForm() {
+export default function ContactForm({ translations }) {
     const {
         register,
         handleSubmit,
@@ -22,6 +15,15 @@ export default function ContactForm() {
         mode: "onBlur",
     });
 
+    const __ = useCallback(
+        (key) => {
+            const translation = translations.find(
+                (translation) => translation[key] !== undefined
+            );
+            return !isUndefined(translation) ? translation[key] : key;
+        },
+        [translations]
+    );
     const [isLoading, setIsLoading] = useState(false);
     const [responseError, setResponseError] = useState({});
 
@@ -37,7 +39,9 @@ export default function ContactForm() {
 
             setResponseError({
                 class: "bg-emerald-700",
-                message: "Úspešne odoslaný formulár, e-mail príde čoskoro",
+                message: __(
+                    "Contact form was successfully submitted, you will receive e-mail soon"
+                ),
             });
 
             reset();
@@ -46,21 +50,22 @@ export default function ContactForm() {
                 case 422:
                     setResponseError({
                         class: "bg-rose-700",
-                        message:
-                            "Zle vyplnený formulár, skontrolujte zadané údaje",
+                        message: __(
+                            "Form is filled wrong, check entered values"
+                        ),
                     });
                     break;
                 case 429:
                     setResponseError({
                         class: "bg-rose-700",
-                        message: "Príliš veľa pokusov, skúste to zajtra",
+                        message: __("Too many attempts, try again tomorrow"),
                     });
                     break;
 
                 default:
                     setResponseError({
                         class: "bg-rose-700",
-                        message: "Nastala chyba, skúste to neskôr",
+                        message: __("Error occurred, try again later"),
                     });
                     break;
             }
@@ -92,21 +97,21 @@ export default function ContactForm() {
             <form action="#" onSubmit={(e) => e.preventDefault()}>
                 <div className="input-control mb-4 w-full md:w-[calc(50%-20px)]">
                     <label className="label-control" htmlFor="full-name-input">
-                        Meno a priezvisko
+                        {__("Name and surname")}
                     </label>
                     <input
                         className="input-content-control"
                         id="full-name-input"
                         type="text"
                         {...register("full_name", {
-                            required: errorMessages.required,
+                            required: __("This field is required"),
                             maxLength: {
                                 value: 100,
-                                message: errorMessages.maxLength,
+                                message: __("Entered value is too long"),
                             },
                             minLength: {
                                 value: 3,
-                                message: errorMessages.minLength,
+                                message: __("Entered value is too short"),
                             },
                         })}
                     />
@@ -120,21 +125,21 @@ export default function ContactForm() {
                             className="label-control"
                             htmlFor="subject-input"
                         >
-                            Predmet
+                            {__("Subject")}
                         </label>
                         <input
                             className="input-content-control"
                             id="subject-input"
                             type="text"
                             {...register("subject", {
-                                required: errorMessages.required,
+                                required: __("This field is required"),
                                 maxLength: {
                                     value: 50,
-                                    message: errorMessages.maxLength,
+                                    message: __("Entered value is too long"),
                                 },
                                 minLength: {
                                     value: 3,
-                                    message: errorMessages.minLength,
+                                    message: __("Entered value is too short"),
                                 },
                             })}
                         />
@@ -151,18 +156,20 @@ export default function ContactForm() {
                             id="email-input"
                             type="email"
                             {...register("email", {
-                                required: errorMessages.required,
+                                required: __("This field is required"),
                                 maxLength: {
                                     value: 100,
-                                    message: errorMessages.maxLength,
+                                    message: __("Entered value is too long"),
                                 },
                                 minLength: {
                                     value: 3,
-                                    message: errorMessages.minLength,
+                                    message: __("Entered value is too short"),
                                 },
                                 pattern: {
                                     value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                    message: errorMessages.regex,
+                                    message: __(
+                                        "This field does not match requested format"
+                                    ),
                                 },
                             })}
                         />
@@ -174,20 +181,20 @@ export default function ContactForm() {
 
                 <div className="input-control">
                     <label className="label-control" htmlFor="message-input">
-                        Vaša správa
+                        {__("Your message")}
                     </label>
                     <textarea
                         className="input-content-control h-64"
                         id="message-input"
                         {...register("message", {
-                            required: errorMessages.required,
+                            required: __("This field is required"),
                             maxLength: {
                                 value: 7000,
-                                message: errorMessages.maxLength,
+                                message: __("Entered value is too long"),
                             },
                             minLength: {
                                 value: 10,
-                                message: errorMessages.minLength,
+                                message: __("Entered value is too short"),
                             },
                         })}
                     />
@@ -210,7 +217,7 @@ export default function ContactForm() {
                         type="submit"
                         onClick={handleSubmit(sendForm)}
                     >
-                        Odoslať
+                        {__("Submit")}
                     </button>
                 </div>
             </form>
@@ -221,5 +228,7 @@ export default function ContactForm() {
 const el = document.getElementById("react-mount-contact-form");
 if (el) {
     const root = createRoot(el);
-    root.render(<ContactForm />);
+    root.render(
+        <ContactForm translations={JSON.parse(el.dataset.translations)} />
+    );
 }

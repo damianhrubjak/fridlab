@@ -13,7 +13,7 @@
                 </h1>
                 <p>{{ __('V prípade akýchkoľvek otázok nás neváhajte kontaktovať.') }} <br>
                     {{ __("Volajte, píšte, mailujte, alebo použite
-                                                                                                                        formulár nižšie.") }}
+                                                                                                                                                                                                                                                                                                                                formulár nižšie.") }}
                 </p>
                 <div class="mt-5 flex w-full justify-center">
 
@@ -80,7 +80,8 @@
     </section>
 
     <section class="page-section bg-pallette-black border-pallette-blue border-y-2">
-        <div class="page-wrapper" id="react-mount-contact-form"></div>
+        <div class="page-wrapper" id="react-mount-contact-form" data-translations="{{ json_encode($translations) }}">
+        </div>
     </section>
 
     <section class="page-section">
