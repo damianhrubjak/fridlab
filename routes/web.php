@@ -34,12 +34,12 @@ Route::group([
     Route::get('/kontakt', [FrontendController::class, 'contactPage'])->name('contact');
 });
 
-Route::get('/login', [FrontendController::class, 'loginPage'])->name('login')->middleware('guest');
 
 // AUTH
 Route::group(
     ['as' => 'auth.'],
     function () {
+        Route::get('/login', [FrontendController::class, 'loginPage'])->name('login-page')->middleware('guest');
         Route::post('/login', [AuthController::class, 'store'])->name('login');
         Route::post('/logout', [AuthController::class, 'destroy'])->middleware('auth')->name('logout');
     }
