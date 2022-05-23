@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('page-title', 'Blog - ' . $blog->title)
+@section('page-title', __('Blogs') . ' - ' . $blog->title)
 
 @section('page-content')
 

@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('page-title', 'Kontakt')
+@section('page-title', __('Contact'))
 
 @section('page-content')
 

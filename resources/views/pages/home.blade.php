@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('page-title', 'Domov')
+@section('page-title', __('Home'))
 
 @section('page-content')
 

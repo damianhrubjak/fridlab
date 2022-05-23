@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('page-title', 'Blog')
+@section('page-title', __('Blogs'))
 
 @section('page-content')
 
