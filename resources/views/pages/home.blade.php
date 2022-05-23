@@ -158,7 +158,7 @@
     <section class="page-section bg-[#a0afcc]">
         <div class="page-wrapper">
             <h2 class="font-heading heading-shadow xs:text-5xl mb-16 break-words text-4xl text-white">
-                {{ __('Sponsors') }}</h2>
+                {{ __('Sponsors and Partners') }}</h2>
 
             <div class="splide relative mx-auto w-full sm:w-[calc(100%-8rem)]" aria-label="Slide Container Example">
                 <div class="splide__track">
