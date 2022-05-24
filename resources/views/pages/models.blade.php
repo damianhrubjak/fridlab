@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('page-title', '3D modely')
+@section('page-title', __('3D Models'))
 
 @section('page-content')
 

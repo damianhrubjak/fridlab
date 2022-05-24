@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('page-title', '3D Model - ' . $printModel->title)
+@section('page-title', __('3D Model') . ' - ' . $printModel->title)
 
 @section('page-content')
 

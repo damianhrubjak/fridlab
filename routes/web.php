@@ -4,7 +4,7 @@ use App\Models\Sponsor;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FileController;
-use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\FrontEndController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,12 +26,12 @@ Route::group([
     'where' => ['language' => '[a-zA-Z]{2}'],
     'middleware' => 'set-locale',
 ], function () {
-    Route::get('/', [FrontendController::class, 'homePage'])->name('home');
-    Route::get('/blogy', [FrontendController::class, 'blogPage'])->name('blogy');
-    Route::get('/blogy/{blog:slug}', [FrontendController::class, 'showBlog'])->name('blogShowPage');
-    Route::get('/3d-modely', [FrontendController::class, 'modelsPage'])->name('3d-models');
-    Route::get('/3d-modely/{printModel:slug}', [FrontendController::class, 'showModel'])->name('modelShowPage')->middleware('print-model-private');
-    Route::get('/kontakt', [FrontendController::class, 'contactPage'])->name('contact');
+    Route::get('/', [FrontEndController::class, 'homePage'])->name('home');
+    Route::get('/blogy', [FrontEndController::class, 'blogPage'])->name('blogy');
+    Route::get('/blogy/{blog:slug}', [FrontEndController::class, 'showBlog'])->name('blogShowPage');
+    Route::get('/3d-modely', [FrontEndController::class, 'modelsPage'])->name('3d-models');
+    Route::get('/3d-modely/{printModel:slug}', [FrontEndController::class, 'showModel'])->name('modelShowPage')->middleware('print-model-private');
+    Route::get('/kontakt', [FrontEndController::class, 'contactPage'])->name('contact');
 });
 
 
@@ -39,7 +39,7 @@ Route::group([
 Route::group(
     ['as' => 'auth.'],
     function () {
-        Route::get('/login', [FrontendController::class, 'loginPage'])->name('login-page')->middleware('guest');
+        Route::get('/login', [FrontEndController::class, 'loginPage'])->name('login-page')->middleware('guest');
         Route::post('/login', [AuthController::class, 'store'])->name('login');
         Route::post('/logout', [AuthController::class, 'destroy'])->middleware('auth')->name('logout');
     }
