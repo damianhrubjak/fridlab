@@ -8,7 +8,7 @@
         <div class="page-wrapper">
             <div class="mx-auto mb-8 flex items-center justify-between">
                 <h1
-                    class="xs:break-normal font-heading heading-shadow break-words text-4xl font-bold leading-relaxed text-white md:text-7xl">
+                    class="xs:break-normal font-heading heading-shadow w-full break-words text-3xl font-bold leading-relaxed text-white md:text-7xl">
                     {{ $blog->title }}</h1>
             </div>
             <div class="w-full">

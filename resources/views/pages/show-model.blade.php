@@ -8,7 +8,7 @@
         <div class="page-wrapper">
             <div class="mx-auto mb-8 flex items-center justify-between">
                 <h1
-                    class="font-heading heading-shadow xs:break-normal break-words text-4xl font-bold leading-relaxed text-white md:text-7xl">
+                    class="xs:break-normal font-heading heading-shadow w-full break-words text-3xl font-bold leading-relaxed text-white md:text-7xl">
                     {{ $printModel->title }}</h1>
             </div>
 
