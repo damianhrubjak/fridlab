@@ -7,7 +7,9 @@
     <div class="section-banner">
         <div class="page-wrapper">
             <div class="mx-auto mb-8 flex items-center justify-between">
-                <h1 class="font-heading heading-shadow text-7xl font-bold text-white">{{ $printModel->title }}</h1>
+                <h1
+                    class="font-heading heading-shadow xs:break-normal break-words text-4xl font-bold leading-relaxed text-white md:text-7xl">
+                    {{ $printModel->title }}</h1>
             </div>
 
             <div class="flex w-full justify-center">

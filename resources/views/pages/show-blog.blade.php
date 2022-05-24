@@ -7,7 +7,9 @@
     <div class="section-banner">
         <div class="page-wrapper">
             <div class="mx-auto mb-8 flex items-center justify-between">
-                <h1 class="font-heading heading-shadow text-7xl font-bold text-white">{{ $blog->title }}</h1>
+                <h1
+                    class="xs:break-normal font-heading heading-shadow break-words text-4xl font-bold leading-relaxed text-white md:text-7xl">
+                    {{ $blog->title }}</h1>
             </div>
             <div class="w-full">
 
